@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
+	xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd"
+	service="CSW" version="2.0.2" resultType="results"
+	outputSchema="http://www.opengis.net/cat/csw/2.0.2" startPosition="1"
+	maxRecords="2">
+	<Query typeNames="csw:Record">
+		<ElementSetName typeNames="csw:Record">summary</ElementSetName>
+		<Constraint version="1.1.0">
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsEqualTo>
+						<ogc:PropertyName>dc:subject</ogc:PropertyName>
+						<ogc:Literal>gov.noaa.class.CORBL</ogc:Literal>
+					</ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:PropertyName>dct:coverage.dateStart</ogc:PropertyName>
+						<ogc:Literal>2011-01-01 00:00:00</ogc:Literal>
+					</ogc:PropertyIsGreaterThanOrEqualTo>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>dct:coverage.dateEnd</ogc:PropertyName>
+						<ogc:Literal>2011-01-03 23:59:59</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+					<ogc:BBOX>
+						<ogc:PropertyName>ows:BoundingBox</ogc:PropertyName>
+						<gml:Envelope srsName="EPSG:4326">
+							<!--
+								The order of spatial coordinates in <gml:lowerCorner> and
+								<gml:upperCorner> of GetRecords request is: latitude longitude
+							-->
+							<gml:lowerCorner>10 -140</gml:lowerCorner>
+							<gml:upperCorner>50 -80</gml:upperCorner>
+						</gml:Envelope>
+					</ogc:BBOX>
+				</ogc:And>
+			</ogc:Filter>
+		</Constraint>
+	</Query>
+</GetRecords>

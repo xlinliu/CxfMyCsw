@@ -1,0 +1,1039 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://cxf.apache.org/jaxws
+           http://cxf.apache.org/schemas/jaxws.xsd
+           http://cxf.apache.org/jaxrs
+           http://cxf.apache.org/schemas/jaxrs.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<!-- 启动附件传输 -->
+	<!-- 用户密码检测拦截器 -->
+	<bean id="userconfiremationInterceptor" class="com.csw.interpetors.UserconfirmationInterceptor">
+	</bean>
+	<bean id="logginininterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" />
+	<bean id="logginoutinterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor"></bean>
+	<!-- AddRegistryPackageServiceWs success -->
+	<jaxws:endpoint id="AddRegistryPacakgeServiceWs"
+		address="/AddressRegistryPacakgeService" implementor="#AddressRegistryPackageService" />
+	<bean id="AddressRegistryPackageService" class="com.csw.Service.impls.AddRegistryPackageService"></bean>
+
+	<!-- CheckUserNameServiceWs success -->
+	<jaxws:endpoint id="CheckUserNameServiceWs" address="/CheckUserNameService"
+		implementor="#CheckUserNameService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CheckUserNameService" class="com.csw.Service.impls.CheckUserNameService"></bean>
+	<!-- CheckUserNameServiceWs success -->
+	<jaxws:endpoint id="CheckUserNameServiceWs2" address="/CheckUserNameService2"
+		implementor="#CheckUserNameService2">
+		<jaxws:inInterceptors>
+			<ref local="userconfiremationInterceptor" />
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CheckUserNameService2" class="com.csw.Service.impls.CheckUserNameService2">
+	</bean>
+	<!--CreateGetRecordByIdDocumentServiceWs  success -->
+	<jaxws:endpoint id="CreateGetRecordByIdDocumentServiceWs"
+		address="/CreateGetRecordByIdDocumentService" implementor="#CreateGetRecordByIdDocumentService"></jaxws:endpoint>
+	<bean id="CreateGetRecordByIdDocumentService"
+		class="com.csw.Service.impls.CreateGetRecordByIdDocumentService"></bean>
+
+	<!-- CreateGetRecordsDocumentService success -->
+	<jaxws:endpoint id="CreateGetRecordsDocumentServiceWs"
+		address="/CreateGetRecordsDocumentService" implementor="#CreateGetRecordsDocumentService" />
+	<bean id="CreateGetRecordsDocumentService" class="com.csw.Service.impls.CreateGetRecordsDocumentService"></bean>
+
+	<!-- DeleteManyFilesBatchService  success-->
+	<jaxws:endpoint id="DeleteManyFilesBatchServiceWs"
+		address="/DeleteManyFilesBatchService" implementor="#DeleteManyFilesBatchService" />
+	<bean id="DeleteManyFilesBatchService" class="com.csw.Service.impls.DeleteManyFilesBatchService"></bean>
+
+	<!-- DeleteOtherInformationService  success -->
+	<jaxws:endpoint id="DeleteOtherInformationServiceWs"
+		address="/DeleteOtherInformationService" implementor="#DeleteOtherInformationService" />
+	<bean id="DeleteOtherInformationService" class="com.csw.Service.impls.DeleteOtherInformationService" />
+
+	<!-- DeleteSensorByTransactionDeleteService success-->
+	<jaxws:endpoint id="DeleteSensorByTransactionDeleteServiceWs"
+		address="/DeleteSensorByTransactionDeleteService" implementor="#DeleteSensorByTransactionDeleteService"></jaxws:endpoint>
+	<bean id="DeleteSensorByTransactionDeleteService"
+		class="com.csw.Service.impls.DeleteSensorByTransactionDeleteService"></bean>
+
+	<!-- DeleteSimpleSensorService success-->
+	<jaxws:endpoint id="DeleteSimpleSensorServiceWs"
+		address="/DeleteSimpleSensorService" implementor="#DeleteSimpleSensorService" />
+	<bean id="DeleteSimpleSensorService" class="com.csw.Service.impls.DeleteSimpleSensorService"></bean>
+
+	<!-- InsertSomeInfoTransactionService success -->
+	<jaxws:endpoint id="InsertSomeInfoTransactionServiceWs"
+		address="/InsertSomeInfoTransactionService" implementor="#InsertSomeInfoTransactionService" />
+	<bean id="InsertSomeInfoTransactionService" class="com.csw.Service.impls.InsertSomeInfoTransactionService"></bean>
+
+	<!-- InsertTransactionInsertContentService  success-->
+	<jaxws:endpoint id="InsertTransactionInsertContentServiceWs"
+		address="/InsertTransactionInsertContentService" implementor="#InsertTransactionInsertContentService" />
+	<bean id="InsertTransactionInsertContentService"
+		class="com.csw.Service.impls.InsertTransactionInsertContentService"></bean>
+
+	<!-- QueryAllUserInfosService success-->
+	<jaxws:endpoint id="QueryAllUserInfosServiceWs" address="/QueryAllUserInfosService"
+		implementor="#QueryAllUserInfosService"></jaxws:endpoint>
+	<bean id="QueryAllUserInfosService" class="com.csw.Service.impls.QueryAllUserInfosService"></bean>
+
+	<!-- RegistryService  success-->
+	<jaxws:endpoint id="RegistryServiceWs" address="/RegistryService"
+		implementor="#RegistryService"></jaxws:endpoint>
+	<bean id="RegistryService" class="com.csw.Service.impls.RegistryService" />
+
+	<!-- SaveEbRimService success-->
+	<jaxws:endpoint id="SaveEbRimServiceWs" address="/SaveEbRimService"
+		implementor="#SaveEbRimService" />
+	<bean id="SaveEbRimService" class="com.csw.Service.impls.SaveEbRimService"></bean>
+
+	<!-- SearchGetRecordByIdDocumentService success -->
+	<jaxws:endpoint id="SearchGetRecordByIdDocumentWs"
+		address="/SearchGetRecordByIdDocumentService" implementor="#SearchGetRecordByIdDocumentService"></jaxws:endpoint>
+	<bean id="SearchGetRecordByIdDocumentService"
+		class="com.csw.Service.impls.SearchGetRecordByIdDocumentService"></bean>
+	<!-- SearchGetRecordByIdDocumentService2 header -->
+	<jaxws:endpoint id="SearchGetRecordByIdDocumentWs2"
+		address="/SearchGetRecordByIdDocumentService2" implementor="#SearchGetRecordByIdDocumentService2">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+			<ref local="userconfiremationInterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="SearchGetRecordByIdDocumentService2"
+		class="com.csw.Service.impls.SearchGetRecordByIdDocumentService2"></bean>
+
+	<!-- ShowCapabilitiesResponseService success -->
+
+	<jaxws:endpoint id="ShowCapabilitiesResponseServiceWs"
+		address="/ShowCapabilitiesResponseService" implementor="#ShowCapabilitiesResponseService"></jaxws:endpoint>
+	<bean id="ShowCapabilitiesResponseService" class="com.csw.Service.impls.ShowCapabilitiesResponseService"></bean>
+
+	<!-- ShowCapabilitiesResponseService2 header -->
+	<jaxws:endpoint id="ShowCapabilitiesResponseServiceWs2"
+		address="/ShowCapabilitiesResponseService2" implementor="#ShowCapabilitiesResponseService2">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+			<!-- 检测用户名与密码是否存在 -->
+			<ref local="userconfiremationInterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ShowCapabilitiesResponseService2" class="com.csw.Service.impls.ShowCapabilitiesResponseService2"></bean>
+
+	<!-- ShowGetResponseDocumentService success -->
+	<jaxws:endpoint id="ShowGetResponseDocumentServiceWs"
+		implementor="#ShowGetResponseDocumentService" address="/ShowGetResponseDocumentService"></jaxws:endpoint>
+	<bean id="ShowGetResponseDocumentService" class="com.csw.Service.impls.ShowGetResponseDocumentService" />
+
+	<!-- ShowSensorInfoUpdateService success -->
+	<jaxws:endpoint id="ShowSensorInfoUpdateServiceWs"
+		address="/ShowSensorInfoUpdateService" implementor="#ShowSensorInfoUpdateService"></jaxws:endpoint>
+	<bean id="ShowSensorInfoUpdateService" class="com.csw.Service.impls.ShowSensorInfoUpdateService"></bean>
+
+
+	<!-- TransactionUpdateContentService success -->
+	<jaxws:endpoint id="TransactionUpdateContentServiceWs"
+		address="/TransactionUpdateContentService" implementor="#TransactionUpdateContentService"></jaxws:endpoint>
+	<bean id="TransactionUpdateContentService" class="com.csw.Service.impls.TransactionUpdateContentService"></bean>
+
+	<!--TransformSensorMLToebRIMService success-->
+	<jaxws:endpoint id="TransformSensorMLToebRIMServiceWs"
+		address="/TransformSensorMLToebRIMService" implementor="#TransformSensorMLToebRIMService"></jaxws:endpoint>
+	<bean id="TransformSensorMLToebRIMService" class="com.csw.Service.impls.TransformSensorMLToebRIMService"></bean>
+
+	<!-- TransformSensorMLToebRIMUpdateService success-->
+	<jaxws:endpoint id="TransformSensorMLToebRIMUpdateServiceWs"
+		address="/TransformSensorMLToebRIMUpdateService" implementor="#TransformSensorMLToebRIMUpdateService"></jaxws:endpoint>
+	<bean id="TransformSensorMLToebRIMUpdateService"
+		class="com.csw.Service.impls.TransformSensorMLToebRIMUpdateService"></bean>
+
+	<!-- UpdateAllEbRIMSensorInfoByEbRIMService  success-->
+	<jaxws:endpoint id="UpdateAllEbRIMSensorInfoByEbRIMServiceWs"
+		address="/UpdateAllEbRIMSensorInfoByEbRIMService" implementor="#UpdateAllEbRIMSensorInfoByEbRIMService"></jaxws:endpoint>
+	<bean id="UpdateAllEbRIMSensorInfoByEbRIMService"
+		class="com.csw.Service.impls.UpdateAllEbRIMSensorInfoByEbRIMService"></bean>
+
+	<!-- UpDateOtherInformationService success -->
+	<jaxws:endpoint id="UpDateOtherInformationServiceWs"
+		address="/UpDateOtherInformationService" implementor="#UpDateOtherInformationService"></jaxws:endpoint>
+	<bean id="UpDateOtherInformationService" class="com.csw.Service.impls.UpDateOtherInformationService"></bean>
+
+	<!-- UpdateSomeSensorInfoService  success-->
+	<jaxws:endpoint id="UpdateSomeSensorInfoServiceWs"
+		address="/UpdateSomeSensorInfoService" implementor="#UpdateSomeSensorInfoService"></jaxws:endpoint>
+	<bean id="UpdateSomeSensorInfoService" class="com.csw.Service.impls.UpdateSomeSensorInfoService"></bean>
+
+	<!-- UpdateUserInfoService success-->
+	<jaxws:endpoint id="UpdateUserInfoServiceWs" address="/UpdateUserInfoService"
+		implementor="#UpdateUserInfoService"></jaxws:endpoint>
+	<bean id="UpdateUserInfoService" class="com.csw.Service.impls.UpdateUserInfoService"></bean>
+
+	<!-- 针对专题二进行的增加部分  -->
+
+	<!-- 保存sensorml和ebrim的格式文档的内容 -->
+	<jaxws:endpoint id="SaveSensorMLAndEbRIMContentServiceWs"
+		address="/SaveSensorMLAndEbRimContentService" implementor="#SaveSensorMLAndEbRimContentService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="SaveSensorMLAndEbRimContentService"
+		class="com.csw.Service.impls.SaveSensorMLAndEbRimContentService"></bean>
+	<!-- 获取所有的sensorml的文档的内容 -->
+	<jaxws:endpoint id="GetOwnerAllSensorMLDocumentServiceWs"
+		address="/GetOwnerAllSensorMLDocumentService" implementor="#GetOwnerAllSensorMLDocumentService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetOwnerAllSensorMLDocumentService"
+		class="com.csw.Service.impls.GetOwnerAllSensorMLDocumentService"></bean>
+	<!-- 获取单个sensorml文档的内容 与文件名-->
+	<jaxws:endpoint id="GetSensorMLByIdServiceWs" address="/GetSensorMLByIdService"
+		implementor="#GetSensorMLByIdService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorMLByIdService" class="com.csw.Service.impls.GetSensorMLByIdService"></bean>
+	<!-- 获取所有的传递过来的sensorml的id值 -->
+	<jaxws:endpoint id="GetAllIdsOfSensormlServiceWs"
+		address="/GetAllIdsOfSensormlService" implementor="#GetAllIdsOfSensormlService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllIdsOfSensormlService" class="com.csw.Service.impls.GetAllIdsOfSensormlService"></bean>
+	<!--删除指定的sensorml 删除所有的sensorml的存入或者只仅仅删除sensor的文档 -->
+	<jaxws:endpoint id="DeleteSensorMLByIdServiceWs"
+		address="/DeleteSensorMLByIdService" implementor="#DeleteSensorMLByIdService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="DeleteSensorMLByIdService" class="com.csw.Service.impls.DeleteSensorMLByIdService"></bean>
+
+	<!-- 更新指定的sensorml的文档的内容 -->
+	<jaxws:endpoint id="UpdateSensorMLDocumentServiceWs"
+		address="/UpdateSensorMLDocumentService" implementor="#UpdateSensorMLDocumentService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="UpdateSensorMLDocumentService" class="com.csw.Service.impls.UpdateSensorMLDocumentService"></bean>
+	<!--
+		检测SensorML是否唯一的存在，这个是针对全局的处理，即所有的用户上传sensorml的文档的id必须是唯一的发否则就无法保存在数据库中
+	-->
+	<jaxws:endpoint id="CheckSensorMLIdByQueryDBServiceWs"
+		address="/CheckSensorMLIdByQueryDBService" implementor="#CheckSensorMLIdByQueryDBService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CheckSensorMLIdByQueryDBService" class="com.csw.Service.impls.CheckSensorMLIdByQueryDBService"></bean>
+	<!-- 附件上传功能 -->
+	<jaxws:endpoint id="SaveSensorMLAndEbRimContentBySAttachementServiceWs"
+		address="/SaveSensorMLAndEbRimContentBySAttachementService"
+		implementor="#SaveSensorMLAndEbRimContentBySAttachementService">
+		<jaxws:properties>
+			<entry key="mtom-enabled" value="true"></entry>
+		</jaxws:properties>
+	</jaxws:endpoint>
+	<jaxws:client id="saveSensorMLAndEbRimContentBySAttachementServiceClient"
+		address="http://202.114.118.197:8080/CxfMyCsw/services/SaveSensorMLAndEbRimContentBySAttachementService"
+		serviceClass="com.csw.Service.interfaces.SaveSensorMLAndEbRimContentByAttachementServiceInterface">
+		<jaxws:properties>
+			<entry key="mtom-enabled" value="true"></entry>
+		</jaxws:properties>
+	</jaxws:client>
+	<bean id="SaveSensorMLAndEbRimContentBySAttachementService"
+		class="com.csw.Service.impls.SaveSensorMLAndEbRimContentBySAttachementService" />
+
+	<!-- 用户获取需要更新的sensorId的文件 -->
+	<jaxws:endpoint id="GetSensorMLNeedToUpdateServiceWs"
+		address="/GetSensorMLNeedToUpdateService" implementor="#GetSensorMLNeedToUpdateService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorMLNeedToUpdateService" class="com.csw.Service.impls.GetSensorMLNeedToUpdateService"></bean>
+	<!-- 获取用户所需的更新的sensor的id和sensor的文档的内容 -->
+	<jaxws:endpoint id="GetUpdateSensorMLAndSensorIdForUpdateSerivceWs"
+		address="/GetUpdateSensorMLAndSensorIdForUpdateSerivce" implementor="#GetUpdateSensorMLAndSensorIdForUpdateSerivce">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetUpdateSensorMLAndSensorIdForUpdateSerivce"
+		class="com.csw.Service.impls.GetUpdateSensorMLAndSensorIdForUpdateSerivce"></bean>
+	<!-- 检验系统是否可以被访问 -->
+	<jaxws:endpoint id="CheckIsConnectServiceWs" address="/CheckIsConnectService"
+		implementor="#CheckIsConnectService"></jaxws:endpoint>
+	<bean id="CheckIsConnectService" class="com.csw.Service.impls.CheckIsConnectService"></bean>
+	<!-- 批量更新删除,插入，更新操作 -->
+	<jaxws:endpoint id="OperateAllSensorMLServiceWs"
+		address="/OperateAllSensorMLService" implementor="#OperateAllSensorMLService">
+	</jaxws:endpoint>
+	<bean id="OperateAllSensorMLService" class="com.csw.Service.impls.OperateAllSensorMLService"></bean>
+	<jaxws:endpoint id="SaveOnlySensorMLServiceWs" address="/SaveOnlySensorMLService"
+		implementor="#SaveOnlySensorMLService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="SaveOnlySensorMLService" class="com.csw.Service.impls.SaveOnlySensorMLService"></bean>
+	<!-- 获取自身或者所有用户的上传的sensorml的id，上传的时间，sensorml的文件名称 -->
+	<jaxws:endpoint id="GetAllBasicInfoOfSensorMLServiceWs"
+		address="/GetAllBasicInfoOfSensorMLService" implementor="#GetAllBasicInfoOfSensorMLService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllBasicInfoOfSensorMLService" class="com.csw.Service.impls.GetAllBasicInfoOfSensorMLService" />
+
+	<!--获取所有的制定的ids的所有的 sensorml的文档的内容  -->
+	<jaxws:endpoint id="GetAllSensorMLDocumentByIdsServiceWs"
+		address="/GetAllSensorMLDocumentByIdsService" implementor="#GetAllSensorMLDocumentByIdsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllSensorMLDocumentByIdsService"
+		class="com.csw.Service.impls.GetAllSensorMLDocumentByIdsService"></bean>
+
+	<!-- 所有的针对sensor的查询的接口 -->
+	<!--传感器全称查询的处理 -->
+	<jaxws:endpoint id="GetSensorLongNameServiceWs" address="/GetSensorLongNameService"
+		implementor="#GetSensorLongNameService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorLongNameService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorLongNameService"></bean>
+	<!-- 传感器的简称的查询的处理 -->
+	<jaxws:endpoint id="GetSensorShortNameServiceWs"
+		address="/GetSensorShortNameService" implementor="#GetSensorShortNameService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorShortNameService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorShortNameService"></bean>
+	<!-- 获取传感器的类型的信息的处理 -->
+	<jaxws:endpoint id="GetSensorSensorTypeServiceWs"
+		address="/GetSensorSensorTypeService" implementor="#GetSensorSensorTypeService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorSensorTypeService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorSensorTypeService"></bean>
+	<!-- 获取传感器的组织单位的信息的处理 -->
+	<jaxws:endpoint id="GetSensorOrganizationInfoServiceWs"
+		address="/GetSensorOrganizationInfoService" implementor="#GetSensorOrganizationInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorOrganizationInfoService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorOrganizationInfoService"></bean>
+	<!-- 获取传感器的组织单位Email联系信息的处理 -->
+	<jaxws:endpoint id="GetSensorConnectionEmailServiceWs"
+		address="/GetSensorConnectionEmailService" implementor="#GetSensorConnectionEmailService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorConnectionEmailService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorConnectionEmailService"></bean>
+	<!-- 获取传感器的组织单位具体的地址信息的处理 -->
+	<jaxws:endpoint id="GetSensorConnectionEarthPosInfoServiceWs"
+		address="/GetSensorConnectionEarthPosInfoService" implementor="#GetSensorConnectionEarthPosInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorConnectionEarthPosInfoService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorConnectionEarthPosInfoService"></bean>
+	<!-- 获取传感器的开始工作时间的信息的处理 -->
+	<jaxws:endpoint id="GetSensorWorkBeginTimeServiceWs"
+		address="/GetSensorWorkBeginTimeService" implementor="#GetSensorWorkBeginTimeService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorWorkBeginTimeService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorWorkBeginTimeService"></bean>
+	<!-- 获取传感器的结束工作时间的信息的处理 -->
+	<jaxws:endpoint id="GetSensorWorkEndTimeServiceWs"
+		address="/GetSensorWorkEndTimeService" implementor="#GetSensorWorkEndTimeService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorWorkEndTimeService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorWorkEndTimeService"></bean>
+	<!-- 获取传感器的地理空间范围的信息的处理 -->
+	<jaxws:endpoint id="GetSensorGeoInfoServiceWs" address="/GetSensorGeoInfoService"
+		implementor="#GetSensorGeoInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorGeoInfoService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorGeoInfoService"></bean>
+	<!-- 获取传感器预期应用信息的处理 -->
+	<jaxws:endpoint id="GetSensorIntendedApplicationServiceWs"
+		address="/GetSensorIntendedApplicationService" implementor="#GetSensorIntendedApplicationService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorIntendedApplicationService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorIntendedApplicationService"></bean>
+	<!-- 获取传感器波段类型的信息的处理  -->
+	<jaxws:endpoint id="GetSensorBandCategoryServiceWs"
+		address="/GetSensorBandCategoryService" implementor="#GetSensorBandCategoryService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorBandCategoryService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorBandCategoryService"></bean>
+	<!-- 获取传感器波段类型中的所有的关于测量方面的信息的普遍的一般方法的发布 -->
+	<jaxws:endpoint id="GetSensorMeasureCapabilityServiceWs"
+		address="/GetSensorMeasureCapabilityService" implementor="#GetSensorMeasureCapabilityService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorMeasureCapabilityService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorMeasureCapabilityService"></bean>
+	<!-- 获取传感器所有的关于计算能力的普遍方法的发布 -->
+	<jaxws:endpoint id="GetSensorComputeCapabilityServiceWs"
+		address="/GetSensorComputeCapabilityService" implementor="#GetSensorComputeCapabilityService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorComputeCapabilityService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorComputeCapabilityService"></bean>
+	<!-- 获取传感器的所有关于通信能力的普遍方法的发布 -->
+	<jaxws:endpoint id="GetSensorCommunicationCapabilityServiceWs"
+		address="/GetSensorCommunicationCapabilityService" implementor="#GetSensorCommunicationCapabilityService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorCommunicationCapabilityService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorCommunicationCapabilityService"></bean>
+	<!-- 获取传感器的所有关于传感器的物理属性的普遍方法的发布  -->
+	<jaxws:endpoint id="GetSensorPhysicalPropertyServiceWs"
+		address="/GetSensorPhysicalPropertyService" implementor="#GetSensorPhysicalPropertyService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorPhysicalPropertyService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorPhysicalPropertyService"></bean>
+	<!-- 获取传感器的所有的关于传感器的定位能力的普遍方法的发布 -->
+	<jaxws:endpoint id="GetSensorPositionInfoServiceWs"
+		address="/GetSensorPositionInfoService" implementor="#GetSensorPositionInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorPositionInfoService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorPositionInfoService"></bean>
+	<!-- 获取传感器的关于 getRecordsResponse的方法的发布-->
+	<jaxws:endpoint id="GetRecordsServiceWs" address="/GetRecordsService"
+		implementor="#GetRecordsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetRecordsService" class="com.csw.Service.impls.GetRecordsService"></bean>
+	<!-- 用户登录  -->
+	<jaxws:endpoint id="LoginUserServiceWs" address="/LoginUserService"
+		implementor="#LoginUserService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="LoginUserService" class="com.csw.Service.impls.LoginUserService"></bean>
+	<!-- 该生成相对应的 细节的getRecords的方法 -->
+	<jaxws:endpoint id="CreateGetRecordsDetailServiceWs"
+		address="/CreateGetRecordsDetailService" implementor="#CreateGetRecordsDetailService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CreateGetRecordsDetailService"
+		class="com.csw.interfaces.querypackage.impls.CreateGetRecordsDetailService"></bean>
+
+	<!-- 该生成相对应的 细节的getRecords的方法 -->
+	<jaxws:endpoint id="CheckSensorIsExitServiceWs" address="/CheckSensorIsExitService"
+		implementor="#CheckSensorIsExitService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CheckSensorIsExitService" class="com.csw.Service.impls.CheckSensorIsExitService"></bean>
+	<!-- ParseAndSaveAllTypesProcessService -->
+	<jaxws:endpoint id="ParseAndSaveAllTypesProcessServiceWs"
+		address="/ParseAndSaveAllTypesProcessService" implementor="#ParseAndSaveAllTypesProcessService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ParseAndSaveAllTypesProcessService"
+		class="com.csw.Service.impls.ParseAndSaveAllTypesProcessService"></bean>
+	<!-- ParseQueryStrAndGetConditionsService -->
+	<jaxws:endpoint id="ParseQueryStrAndGetConditionsServiceWs"
+		address="/ParseQueryStrAndGetConditionsService" implementor="#ParseQueryStrAndGetConditionsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ParseQueryStrAndGetConditionsService"
+		class="com.csw.Service.impls.ParseQueryStrAndGetConditionsService"></bean>
+	<!-- QuerySensorsByConditionsService -->
+	<jaxws:endpoint id="QuerySensorsByConditionsServiceWs"
+		address="/QuerySensorsByConditionsService" implementor="#QuerySensorsByConditionsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="QuerySensorsByConditionsService" class="com.csw.Service.impls.QuerySensorsByConditionsService"></bean>
+	<!-- SaveEbRimContentService -->
+	<jaxws:endpoint id="SaveEbRimContentServiceWs" address="/SaveEbRimContentService"
+		implementor="#SaveEbRimContentService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="SaveEbRimContentService" class="com.csw.Service.impls.SaveEbRimContentService"></bean>
+	<!-- 语义注册的简单的示例 -->
+	<bean id="SaveSensorMLService" class="com.csw.Service.impls.SaveSensorMLService"></bean>
+	<!-- getsensor keywords -->
+	<jaxws:endpoint id="GetSensorKeyWordsWs" address="/GetSensorKeyWordsService"
+		implementor="#GetSensorKeyWords">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorKeyWords"
+		class="com.csw.interfaces.querypackage.impls.GetSensorKeyWordsService"></bean>
+	<!-- 获取所有制定类型的传感器的集合 -->
+	<jaxws:endpoint id="GetSameSensorTypeGroupServiceWs"
+		address="/GetSameSensorTypeGroupService" implementor="#GetSameSensorTypeGroupService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSameSensorTypeGroupService" class="com.csw.Service.impls.GetSameSensorTypeGroupService"></bean>
+	<!-- 获取传感器搭载的波段数  -->
+	<jaxws:endpoint id="GetSensorBandNumberServiceWs"
+		address="/GetSensorBandNumberService" implementor="#GetSensorBandNumberService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorBandNumberService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorBandNumberService"></bean>
+	<!--获取多个传感器的传感器的类型-->
+	<jaxws:endpoint id="GetMutiSensorTypeOfSensorsServiceWs"
+		address="/GetMutiSensorTypeOfSensorsService" implementor="#GetMutiSensorTypeOfSensorsService">
+	</jaxws:endpoint>
+	<bean id="GetMutiSensorTypeOfSensorsService"
+		class="com.csw.interfaces.querypackage.impls.GetMutiSensorTypeOfSensorsService"></bean>
+	<!--	获取特定类型的平台和附带的传感器的序列 -->
+	<jaxws:endpoint id="QueryPlatFormandSensorsServiceWs"
+		address="/QueryPlatFormandSensorsService" implementor="#QueryPlatFormandSensorsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="QueryPlatFormandSensorsService" class="com.csw.Service.impls.QueryPlatFormandSensorsService"></bean>
+	<!-- 获取制定传感器的所属的平台信息-->
+	<jaxws:endpoint id="GetSensorsBelongPlatfromServiceWs"
+		address="/GetSensorsBelongPlatfromService" implementor="#GetSensorsBelongPlatfromService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorsBelongPlatfromService" class="com.csw.Service.impls.GetSensorsBelongPlatfromService"></bean>
+	<!--	获取指定的平台下的全部的传感器列表 -->
+	<jaxws:endpoint id="GetSpecialPlatformSensorsServiceWs"
+		address="/GetSpecialPlatformSensorsService" implementor="#GetSpecialPlatformSensorsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSpecialPlatformSensorsService" class="com.csw.Service.impls.GetSpecialPlatformSensorsService"></bean>
+	<!--	获取所有平台的类型集合-->
+	<jaxws:endpoint id="GetAllPlatfromTypesServiceWs"
+		address="/GetAllPlatfromTypesService" implementor="#GetAllPlatfromTypesService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllPlatfromTypesService" class="com.csw.Service.impls.GetAllPlatfromTypesService"></bean>
+	<!--获取所有传感器的类型，包括平台和传感器的类型-->
+	<jaxws:endpoint id="GetAllSensorTypesServiceWs" address="/GetAllSensorTypesService"
+		implementor="#GetAllSensorTypesService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllSensorTypesService" class="com.csw.Service.impls.GetAllSensorTypesService"></bean>
+	<!-- 判断传感器是属于某一平台，可以在集合中使用判断多个传感器的归属问题 -->
+	<jaxws:endpoint id="SensorIsBelongPlatfromServiceWs"
+		address="/SensorIsBelongPlatfromService" implementor="#SensorIsBelongPlatfromService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="SensorIsBelongPlatfromService" class="com.csw.Service.impls.SensorIsBelongPlatfromService"></bean>
+	<!--还未测试 -->
+	<!-- 获取多个传感器的SensorML文档 -->
+	<jaxws:endpoint id="GetSensorMLByIdsServiceWs" address="/GetSensorMLByIdsService"
+		implementor="#GetSensorMLByIdsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorMLByIdsService" class="com.csw.Service.impls.GetSensorMLByIdsService"></bean>
+	<!--操作传感器图片的服务-->
+	<jaxws:endpoint id="OperateSensorMLImageServiceWs"
+		address="/OperateSensorMLImageService" implementor="#OperateSensorMLImageService">
+		<jaxws:properties>
+			<entry key="mtom-enabled" value="true" />
+		</jaxws:properties>
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="OperateSensorMLImageService" class="com.csw.Service.impls.OperateSensorMLImageService"></bean>
+	<!--	QuerySensorBasicInfoService-->
+	<jaxws:endpoint id="QuerySensorBasicInfoServiceWs"
+		address="/QuerySensorBasicInfoService" implementor="#QuerySensorBasicInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="QuerySensorBasicInfoService"
+		class="com.csw.interfaces.querypackage.impls.QuerySensorBasicInfoService"></bean>
+	<!-- 对传感器类型规则进行处理-->
+	<jaxws:endpoint id="OperateSensorTypeRuleOperationWs"
+		address="/OperateSensorTypeRuleOperationService" implementor="#OperateSensorTypeRuleOperation">
+	</jaxws:endpoint>
+	<bean id="OperateSensorTypeRuleOperation"
+		class="com.csw.utils.OperateSensorTypeRuleUtil.OperateSensorTypeRuleOperation"></bean>
+	<!-- 对传感器的标准的名称和时间的维护 -->
+	<jaxws:endpoint id="OperateSensorOrbitAndBBOXWs"
+		address="/OperateSensorOrbitAndBBOXService" implementor="#OperateSensorOrbitAndBBOX">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="OperateSensorOrbitAndBBOX"
+		class="com.csw.utils.operatesensororbitandbbox.OperateSensorOrbitAndBBOX"></bean>
+	<!-- 对卫星标准名称和卫星平台对应关系的维护  -->
+	<jaxws:endpoint id="OperateStandardSatAndPlantformWs"
+		address="/OperateStandardSatAndPlantformService" implementor="#OperateStandardSatAndPlantform">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="OperateStandardSatAndPlantform"
+		class="com.csw.utils.operatesensororbitandbbox.OperateStandardSatAndPlantform"></bean>
+	<!-- 读取多个传感器的空间范围 -->
+	<jaxws:endpoint id="QueryAllSensorsBBOXServiceWs"
+		address="/QueryAllSensorsBBOXService" implementor="#QueryAllSensorsBBOXService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="QueryAllSensorsBBOXService" class="com.csw.Service.impls.QueryAllSensorsBBOXService"></bean>
+
+	<!-- 核实用户名或密码信息 -->
+	<jaxws:endpoint id="CheckUserInfoServiceWs" address="/CheckUserInfoService"
+		implementor="#CheckUserInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CheckUserInfoService" class="com.csw.Service.impls.CheckUserInfoService"></bean>
+	<!-- 查询传感器是否可控 -->
+	<jaxws:endpoint id="GetSensorIsOperableServiceWs"
+		address="/GetSensorIsOperableService" implementor="#GetSensorIsOperableService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorIsOperableService" class="com.csw.Service.impls.GetSensorIsOperableService"></bean>
+	<!-- 查询传感器是否公开GetSensorShareableService -->
+	<jaxws:endpoint id="GetSensorShareableServiceWs"
+		address="/GetSensorShareableService" implementor="#GetSensorShareableService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorShareableService" class="com.csw.Service.impls.GetSensorShareableService"></bean>
+	<!-- 获取指定的传感器的服务GetRegistrySensorWithOwnerOptionService -->
+	<jaxws:endpoint id="GetRegistrySensorWithOwnerOptionServiceWs"
+		address="/GetRegistrySensorWithOwnerOptionService" implementor="#GetRegistrySensorWithOwnerOptionService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetRegistrySensorWithOwnerOptionService"
+		class="com.csw.Service.impls.GetRegistrySensorWithOwnerOptionService"></bean>
+	<!-- 张翔，保存专题图部分，可以删除，不需要的话 OperateThemeFileService-->
+	<jaxws:endpoint id=" OperateThemeFileServiceWs" address="/OperateThemeFileService"
+		implementor="#OperateThemeFileService">
+		<jaxws:properties>
+			<entry key="mtom-enabled" value="true" />
+		</jaxws:properties>
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="OperateThemeFileService" class="com.zx.Service.impl.OperateThemeFileService"></bean>
+	<!-- 获取中文的输入参数 GetSensorChineseInputsService -->
+	<jaxws:endpoint id="GetSensorChineseInputsServiceWs"
+		address="/GetSensorChineseInputsService" implementor="#GetSensorChineseInputsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorChineseInputsService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorChineseInputsService"></bean>
+	<!-- 获取中文的输出参数  GetSensorChineseOutputsService-->
+	<jaxws:endpoint id="GetSensorChineseOutputsServiceWs"
+		address="/GetSensorChineseOutputsService" implementor="#GetSensorChineseOutputsService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSensorChineseOutputsService"
+		class="com.csw.interfaces.querypackage.impls.GetSensorChineseOutputsService"></bean>
+	<!--获取所有传感器的基本信息 GetAllSensorBasicInfoService -->
+	<jaxws:endpoint id="GetAllSensorBasicInfoServiceWs"
+		address="/GetAllSensorBasicInfoService" implementor="#GetAllSensorBasicInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetAllSensorBasicInfoService" class="com.csw.Service.impls.GetAllSensorBasicInfoService"></bean>
+	<jaxws:endpoint id="GetSOSInfoServiceWS" address="/GetSOSInfoService"
+		implementor="#GetSOSInfoService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="GetSOSInfoService" class="com.csw.Service.impls.GetSOSInfoService"></bean>
+	
+	<!-- csw管理 success -->
+	<jaxws:endpoint id="CswServiceOperationServiceWs"
+		address="/CswServiceOperation" implementor="#CswServiceOperation">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="CswServiceOperation" class="com.yxl.csw.Services.impl.CswServiceOperation"></bean>
+	<!-- 模型管理 -->
+	<jaxws:endpoint id="ModelServiceOperationServiceWs"
+		address="/ModelServiceOpeartion" implementor="#ModelServiceOpeartion">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ModelServiceOpeartion" class="com.yxl.csw.Services.impl.ModelServiceOperation"></bean>
+	<!-- 元数据管理 -->
+	<jaxws:endpoint id="MetedataServiceOperationServiceWs"
+		address="/MetedataServiceOpeartion" implementor="#MetedataServiceOpeartion">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="MetedataServiceOpeartion" class="com.yxl.csw.Services.impl.DataMetadataServiceOperation"></bean>
+	<!-- 服务链管理 -->
+	<jaxws:endpoint id="ServiceChainServiceOperationWs"
+		address="/ServiceChainServiceOperation" implementor="#ServiceChainServiceOperation">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ServiceChainServiceOperation" class="com.yxl.csw.Services.impl.ServiceChainServiceOperation"></bean>
+	<!-- 服务结果注册管理 -->
+	<jaxws:endpoint id="ServiceResultServiceOperationWs"
+		address="/ServiceResultServiceOperation" implementor="#ServiceResultServiceOperation">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="ServiceResultServiceOperation" class="com.yxl.csw.Services.impl.ServiceResultServiceOperation"></bean>
+
+	<!-- 事件管理服务 -->
+	<jaxws:endpoint id="EventOpearationServiceWs" address="/EventOpearationService"
+		implementor="#EventOpearationService">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="EventOpearationService" class="com.yxl.csw.Services.impl.EventServiceOperation"></bean>
+	<!-- 移动段调用AndroidAppServiceOperation -->
+	<jaxws:endpoint id="AndroidAppServiceOperationWs"
+		address="/AndroidAppServiceOperation" implementor="#AndroidAppServiceOperation">
+		<jaxws:inInterceptors>
+			<ref local="logginininterceptor" />
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<ref local="logginoutinterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:endpoint>
+	<bean id="AndroidAppServiceOperation" class="com.yxl.csw.Services.impl.AndroidAppServiceOperation"></bean>
+	
+	<!--	<jaxws:endpoint id="SOSServicesWs"-->
+	<!--		address="/SOSServices" implementor="#SOSServices">-->
+	<!--		<jaxws:inInterceptors>-->
+	<!--			<ref local="logginininterceptor" />-->
+	<!--		</jaxws:inInterceptors>-->
+	<!--		<jaxws:outInterceptors>-->
+	<!--			<ref local="logginoutinterceptor" />-->
+	<!--		</jaxws:outInterceptors>-->
+	<!--	</jaxws:endpoint>-->
+	<!--
+		<bean id="SOSServices"
+		class="com.csw.Service.impls.SOSServices"></bean>
+	-->
+</beans>
+	

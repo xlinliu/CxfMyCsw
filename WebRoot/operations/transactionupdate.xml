@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transaction xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+	xmlns="http://www.opengis.net/cat/csw/2.0.2" xmlns:ogc="http://www.opengis.net/ogc"
+	service="CSW" version="2.0.2" verboseResponse="true">
+	<Update>
+		<rim:RegistryPackage xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.opengis.net/cat/wrs/1.0 http://schemas.opengis.net/csw/2.0.2/profiles/ebrim/1.0/csw-ebrim.xsd http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"
+			id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:package">
+			<rim:RegistryObjectList>
+				<wrs:ExtrinsicObject xmlns:wrs="http://www.opengis.net/cat/wrs/1.0"
+					mimeType="application/xml" objectType="urn:ogc:def:objectType:OGC-CSW-ebRIM-Sensor::System"
+					lid="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L" id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L">
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::Keywords"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:String">
+						<rim:ValueList>
+							<rim:Value>溶解氧</rim:Value>
+							<rim:Value>水质</rim:Value>
+							<rim:Value>现场</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::ValidTimeBegin"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:DateTime">
+						<rim:ValueList>
+							<rim:Value>2011-01-01T00:00:00.0Z</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::ValidTimeEnd"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:DateTime">
+						<rim:ValueList>
+							<rim:Value />
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::BoundedBy"
+						slotType="urn:ogc:def:dataType:ISO-19107:2003:GM_Envelope">
+						<wrs:ValueList>
+							<wrs:AnyValue>
+								<gml:Envelope xmlns:gml="http://www.opengis.net/gml"
+									srsName="urn:ogc:def:crs:EPSG:4326">
+									<gml:lowerCorner>30.546206 114.359650</gml:lowerCorner>
+									<gml:upperCorner>30.546206 114.359650</gml:upperCorner>
+								</gml:Envelope>
+							</wrs:AnyValue>
+						</wrs:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::Location"
+						slotType="urn:ogc:def:dataType:ISO-19107:2003:GM_Point">
+						<wrs:ValueList>
+							<wrs:AnyValue>
+								<gml:Point xmlns:gml="http://www.opengis.net/gml"
+									gml:id="N65863" srsName="urn:ogc:def:crs:EPSG:4329">
+									<gml:pos>30.546206 114.359650</gml:pos>
+									<!--
+								z-value '999999' omitted!
+							-->
+								</gml:Point>
+							</wrs:AnyValue>
+						</wrs:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::Inputs"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:String">
+						<rim:ValueList>
+							<rim:Value>urn:ogc:def:property:OGC:1.0:DissolvedOxygen
+							</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::Outputs"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:String">
+						<rim:ValueList>
+							<rim:Value>urn:ogc:def:property:OGC:1.0:DissolvedOxygen
+							</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::ShortName"
+						slotType="urn:oasis:names:tc:ebxml-regrep:DataType:String">
+						<rim:ValueList>
+							<rim:Value>神瑞CS511-L传感器</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Name>
+						<rim:LocalizedString xml:lang="en-US"
+							value="神瑞阿斯顿发射点传感器CS511-L" />
+					</rim:Name><!--******** classifications ********-->
+					<rim:Classification
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:classification:N65603"
+						classifiedObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L"
+						classificationNode="urn:ogc:def:objectType:OGC-CSW-ebRIM-Sensor::N65605" />
+					<rim:Classification
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:classification:N65609"
+						classifiedObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L"
+						classificationNode="urn:ogc:def:objectType:OGC-CSW-ebRIM-Sensor::N65611" />
+					<rim:Description>
+						<rim:LocalizedString xml:lang="en-US"
+							value="CS511是由Sensorex生产的一款坚实耐磨、维护量低的溶解氧传感器，其内置了一个自身极化的自发电池，产生与测量介质中（典型介质为水）氧含量成一定比例的毫伏信号，内置的一个热敏电阻提供自动的温度补偿，以保证测量的精确性。该传感器对Campbell的数据采集器具有良好的兼容性。" />
+					</rim:Description>
+				</wrs:ExtrinsicObject><!--******** classification nodes ********-->
+				<rim:ClassificationNode
+					id="urn:ogc:def:objectType:OGC-CSW-ebRIM-Sensor::N65605"
+					parent="urn:ogc:def:classificationScheme:OGC-CSW-ebRIM-Sensor::IntendedApplication">
+					<rim:Name>
+						<rim:LocalizedString xml:lang="en-US" value="水质监测" />
+					</rim:Name>
+				</rim:ClassificationNode>
+				<rim:ClassificationNode
+					id="urn:ogc:def:objectType:OGC-CSW-ebRIM-Sensor::N65611"
+					parent="urn:ogc:def:classificationScheme:OGC-CSW-ebRIM-Sensor::SystemTypes">
+					<rim:Name>
+						<rim:LocalizedString xml:lang="en-US" value="溶解氧传感器" />
+					</rim:Name>
+				</rim:ClassificationNode><!--******** associations ********-->
+				<rim:Association
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:association:N65900"
+					associationType="urn:ogc:def:associationType::OGC-CSW-ebRIM-Sensor::AccessibleThrough"
+					sourceObject="&#10;&#9;&#9;&#9;select=&quot;sml:identification/sml:IdentifierList/sml:identifier/sml:Term[@definition='urn:ogc:def:identifier:OGC::uniqueID'&#10;&#9;&#9;&#9;or @definition='urn:ogc:def:identifier:OGC:1.0:uniqueID']/sml:value&quot;&#10;&#9;&#9;&#9;/&gt;&#10;&#9;&#9;"
+					targetObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65900">
+					<rim:Slot
+						name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::ServiceSpecificSensorID">
+						<rim:ValueList>
+							<rim:Value>urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L
+							</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+				</rim:Association>
+				<rim:Service
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65900">
+					<rim:Classification
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:classification:N65900"
+						classifiedObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65900"
+						classificationNode="urn:ogc:serviceType:SensorObservationService" />
+					<rim:ServiceBinding
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65905"
+						service="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65900"
+						accessURI="http://swe.whu.edu.cn:9000/JSJSOS/sos">
+						<rim:Name>
+							<rim:LocalizedString xml:lang="en-US"
+								value="China_SensorFilter" />
+						</rim:Name>
+						<rim:Description>
+							<rim:LocalizedString xml:lang="en-US" value="TBD" />
+						</rim:Description>
+					</rim:ServiceBinding>
+				</rim:Service>
+				<rim:Association
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:association:N65921"
+					associationType="urn:ogc:def:associationType::OGC-CSW-ebRIM-Sensor::AccessibleThrough"
+					sourceObject="&#10;&#9;&#9;&#9;select=&quot;sml:identification/sml:IdentifierList/sml:identifier/sml:Term[@definition='urn:ogc:def:identifier:OGC::uniqueID'&#10;&#9;&#9;&#9;or @definition='urn:ogc:def:identifier:OGC:1.0:uniqueID']/sml:value&quot;&#10;&#9;&#9;&#9;/&gt;&#10;&#9;&#9;"
+					targetObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65921">
+					<rim:Slot
+						name="urn:ogc:def:slot:OGC-CSW-ebRIM-Sensor::ServiceSpecificSensorID">
+						<rim:ValueList>
+							<rim:Value>urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L
+							</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+				</rim:Association>
+				<rim:Service
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65921">
+					<rim:Classification
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:classification:N65921"
+						classifiedObject="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65921"
+						classificationNode="urn:ogc:serviceType:SensorObservationService" />
+					<rim:ServiceBinding
+						id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65926"
+						service="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:service:N65921"
+						accessURI="http://swe.whu.edu.cn:9000/JSJSOS/sos">
+						<rim:Name>
+							<rim:LocalizedString xml:lang="en-US" value="WHU_SOS" />
+						</rim:Name>
+						<rim:Description>
+							<rim:LocalizedString xml:lang="en-US" value="TBD" />
+						</rim:Description>
+					</rim:ServiceBinding>
+				</rim:Service><!--########## contact information ##########-->
+				<rim:Organization
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:org:N65820"
+					primaryContact="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:org:N65818">
+					<rim:Name>
+						<rim:LocalizedString value="武汉大学测绘遥感信息工程国家重点实验室" />
+					</rim:Name>
+					<rim:Address
+						street="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;湖北省武汉市珞瑜路129号&#10;&#9;&#9;&#9;&#9;&#9;&#9;"
+						city="武汉" postalCode="430079" country="中国" />
+					<rim:EmailAddress
+						address="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Jerrylee@qq.com&#10;&#9;&#9;&#9;&#9;&#9;&#9;" />
+				</rim:Organization>
+				<rim:Person
+					id="urn:liesmars:Sensor:id:DissolvedOxygen_CS511-L:person:N65818">
+					<rim:PersonName lastName="李佳" />
+
+				</rim:Person>
+			</rim:RegistryObjectList>
+		</rim:RegistryPackage>
+	</Update>
+</Transaction>

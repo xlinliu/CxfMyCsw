@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:ProcessMethod xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+	xmlns:swe="http://www.opengis.net/swe/1.0" xmlns:gml="http://www.opengis.net/gml"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd">
+
+	<gml:description>
+		The normalized difference water index (NDWI) proposed
+		here uses two
+		channels-green and NIR.</gml:description>
+	<sml:identification>
+		<sml:IdentifierList>
+			<sml:identifier>
+				<sml:Term definition="urn:ogc:def:property:OGC:processID">
+					<sml:value>urn:ogc:feature:processmethod:NDVI-Process-Method</sml:value>
+				</sml:Term>
+			</sml:identifier>
+		</sml:IdentifierList>
+	</sml:identification>
+	<sml:contact xlink:arcrole="urn:liesmars:def:role:operator">
+		<sml:ResponsibleParty>
+			<sml:individualName>Xiaolei Wang</sml:individualName>
+			<sml:organizationName>State Key Laboriatory of Information
+				Engineering in Surveying , Mapping and Remote Sensing</sml:organizationName>
+			<sml:contactInfo>
+				<sml:address>
+					<sml:deliveryPoint>Wuhan University,China</sml:deliveryPoint>
+					<sml:city>Wuhan</sml:city>
+					<sml:country>China</sml:country>
+				</sml:address>
+			</sml:contactInfo>
+		</sml:ResponsibleParty>
+	</sml:contact>
+	<sml:documentation xlink:role="formula">
+		<sml:Document>
+			<gml:description>NDWI is useful for remote sensing vegetation liquid
+				water status from space. NDWI, derived from the green and NIR
+				channels, responds to changes in both the water content and spongy
+				mesophyll in vegetation canopies.
+			</gml:description>
+			<sml:onlineResource
+				xlink:href="http://www.sciencedirect.com/science/article/pii/S0034425796000673" />
+		</sml:Document>
+	</sml:documentation>
+	<sml:rules>
+		<sml:RulesDefinition>
+			<gml:description>
+				1 input must be green band. 1 input must be NIR
+				band.1 output must be
+				the value of NDWI.
+			</gml:description>
+			<sml:schematron />
+		</sml:RulesDefinition>
+	</sml:rules>
+	<sml:algorithm>
+		<sml:AlgorithmDefinition>
+			<gml:description>Apply following formula:NDWI=(NIR-GREEN)/(NIR+GREEN)
+			</gml:description>
+			<sml:mathML xlink:href="...\...\NDWI_Algorithm.xml" />
+		</sml:AlgorithmDefinition>
+	</sml:algorithm>
+	<sml:implementation>
+		<sml:ImplementationCode language="1" version="1"
+			framework="1">
+			<gml:description>ddddd</gml:description>
+		</sml:ImplementationCode>
+	</sml:implementation>
+</sml:ProcessMethod>
+

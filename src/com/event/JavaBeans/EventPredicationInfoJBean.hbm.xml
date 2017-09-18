@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.event.JavaBeans.EventPredicationInfoJBean"
+		table="event_predication_info">
+		<id name="predicationid" column="predicationid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="possibleSeverity" column="possibleseverity"
+			not-null="true"></property>
+		<component name="possibleLocation" class="com.event.InnerEntities.LatLongPiar">
+			<property name="gaodu" not-null="true"></property>
+			<property name="pointx" not-null="true"></property>
+			<property name="pointy" not-null="true"></property>
+		</component>
+		<component name="possibleTime" class="com.event.InnerEntities.TimePeroid">
+			<property name="endtime" not-null="true"></property>
+			<property name="startime" not-null="true"></property>
+		</component>
+	</class>
+</hibernate-mapping>

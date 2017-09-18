@@ -1,0 +1,10 @@
+delete jena_g1t0_reif;
+delete jena_g1t1_stmt;
+delete jena_graph;
+delete jena_long_lit;
+delete jena_long_uri;
+delete jena_prefix;
+delete jena_sys_stmt;
+delete rdfb_jena_oracle_model;
+delete rdfc_jena_oracle_model;
+COMMIT;

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
+xmlns:swe="http://www.opengis.net/swe/1.0.1" 
+xmlns:gml="http://www.opengis.net/gml" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
+version="1.0.1">
+	<sml:member >
+		<sml:System gml:id="OMI_Aura">
+			<gml:description>臭氧监测仪OMI是搭载在EOS Aura卫星上的重要仪器之一，OMI测量大气中的关键污染成分即NO2、SO2、BrO、OClO和气溶胶，从而描绘出城市到大陆区域尺度上这些污染的分布。</gml:description>
+			<!--     关键字     -->
+			<sml:keywords>
+				<sml:KeywordList>
+					<sml:keyword>Aura</sml:keyword>
+					<sml:keyword>OMI</sml:keyword>
+					<sml:keyword>臭氧层</sml:keyword>
+					<sml:keyword>NO2, SO2, BrO, OClO</sml:keyword>
+				</sml:KeywordList>
+			</sml:keywords>
+			<!--     标识符     -->
+			<sml:identification>
+				<sml:IdentifierList>
+					<sml:identifier name="识别码">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+							<sml:value>urn:liesmars:Sensor:id:OMI_Aura</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="全称">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+							<sml:value>臭氧监测仪</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="简称">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+							<sml:value>OMI</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="传感器关联的平台">
+						<sml:Term definition="urn:liesmars:def:identifier:LIESMARS:instrumentAssociatedPlatform">
+							<sml:value>Aura卫星</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="平台识别码">
+						<sml:Term definition="urn:liesmars:def:identifier:LIESMARS:platformID">
+							<sml:value>urn:liesmars:Sensor:id:Aura</sml:value>
+						</sml:Term>
+					</sml:identifier>
+				</sml:IdentifierList>
+			</sml:identification>
+			<!--     分类器     -->
+			<sml:classification>
+				<sml:ClassifierList>
+					<sml:classifier name="传感器类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:sensorType">
+							<sml:value>高光谱成像仪</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="传感器类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:sensorType">
+							<sml:value>遥感</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="扫描类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:scannerType">
+							<sml:value>推扫式</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>环境监测</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>大气成分</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>臭氧层</sml:value>
+						</sml:Term>
+					</sml:classifier>
+				</sml:ClassifierList>
+			</sml:classification>
+			<!--     有效时间     -->
+			<sml:validTime>
+				<gml:TimePeriod gml:id="DOC_TIME">
+					<gml:beginPosition>2002-07-15T20:00:00Z</gml:beginPosition>
+					<gml:endPosition indeterminatePosition="now"/>
+				</gml:TimePeriod>
+			</sml:validTime>
+			<!--     物理特征     -->
+			<sml:characteristics>
+				<swe:DataRecord>
+					<swe:field name="重量">
+						<swe:Quantity definition="urn:ogc:def:property:OGC:1.0:weight">
+							<swe:uom code="kg" />
+							<swe:value>65</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="功率">
+						<swe:Quantity definition="urn:ogc:def:property:OGC:1.0:power">
+							<swe:uom code="w" />
+							<swe:value>66</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="数据获取率">
+						<swe:Quantity definition="urn:ogc:def:property:OGC:1.0:dataRate">
+							<swe:uom code="Mbps" />
+							<swe:value>8</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					 <swe:field name="设计寿命">
+                  <swe:Quantity definition="urn:liesmars:def:property:LIESMARS:designlife">
+                     <swe:uom code="Y"/>
+                     <swe:value>7</swe:value>
+                  </swe:Quantity>
+               </swe:field>
+				</swe:DataRecord>
+			</sml:characteristics>
+			<!--     能力特征     -->
+			<sml:capabilities name="光谱特征">
+				<swe:DataRecord>
+					<swe:field name="光谱波段数量">
+						<swe:Count definition="urn:liesmars:def:property:LIESMARS:numChannels">
+							<swe:value>3</swe:value>
+						</swe:Count>
+					</swe:field>
+					<swe:field name="波段数量">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>紫外-1</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange definition="urn:liesmars:def:property:LIESMARS:swathWidth">
+									<swe:uom code="nm" />
+									<swe:value>270 314</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Count>
+									<swe:value>1</swe:value>
+								</swe:Count>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段数量">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>紫外-2</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange definition="urn:liesmars:def:property:LIESMARS:swathWidth">
+									<swe:uom code="nm" />
+									<swe:value>306 380</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Count>
+									<swe:value>1</swe:value>
+								</swe:Count>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段数量">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>可见光</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange definition="urn:liesmars:def:property:LIESMARS:swathWidth">
+									<swe:uom code="nm" />
+									<swe:value>350 500</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Count>
+									<swe:value>1</swe:value>
+								</swe:Count>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+				</swe:DataRecord>
+			</sml:capabilities>
+			<sml:capabilities name="空间特征">
+				<swe:DataRecord>
+					<swe:field name="刈副">
+						<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:swathWidth">
+							<swe:uom code="km"/>
+							<swe:value>2600</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="视角">
+						<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:fov">
+							<swe:uom code="deg"/>
+							<swe:value>114</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="地面分辨率">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>紫外</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:groundResolution">
+									<swe:uom code="m"/>
+									<swe:value>24000</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>	
+					</swe:field>	
+					<swe:field name="地面分辨率">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>可见光</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:groundResolution">
+									<swe:uom code="m"/>
+									<swe:value>12000</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>	
+					</swe:field>
+				</swe:DataRecord>	
+			</sml:capabilities>
+			<sml:capabilities name="时间特征">
+				<swe:DataRecord>
+					<swe:field name="时间分辨率">
+						<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:temporalResolution">
+							<swe:uom code="d"/>
+							<swe:value>16</swe:value>
+						</swe:Quantity>
+					</swe:field>
+				</swe:DataRecord>
+			</sml:capabilities>
+			<!--     联系     -->
+			<sml:contact >
+				<sml:ResponsibleParty>
+					<sml:individualName>胡楚丽</sml:individualName>
+					<sml:organizationName>测绘遥感信息工程国家重点实验室</sml:organizationName>
+					<sml:contactInfo>
+						<sml:phone>
+							<sml:voice>+8613437251610</sml:voice>
+						</sml:phone>
+						<sml:address>
+							<sml:deliveryPoint>中华人民共和国湖北省武汉大学</sml:deliveryPoint>
+							<sml:city>武汉</sml:city>
+							<sml:postalCode>430079</sml:postalCode>
+							<sml:country>中国</sml:country>
+						</sml:address>
+					</sml:contactInfo>
+				</sml:ResponsibleParty>
+			</sml:contact>
+			<!--     文档     -->
+			<sml:documentation>
+			</sml:documentation>
+			<!--     位置     -->
+			<sml:position  name="sensor_position">
+				<swe:Position localFrame="#ALI_sensorCRS" 
+					referenceFrame="urn:ogc:id:EO1Sat#EO1-CRS">
+					<swe:location>
+						<swe:Vector >
+							<swe:coordinate name="x">
+								<swe:Quantity>
+									<swe:uom code="m"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="y">
+								<swe:Quantity>
+									<swe:uom code="m"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="z">
+								<swe:Quantity>
+									<swe:uom code="m"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>									
+						</swe:Vector>
+					</swe:location>
+					<swe:orientation>
+						<swe:Vector >
+							<swe:coordinate name="x">
+								<swe:Quantity>
+									<swe:uom code="deg"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="y">
+								<swe:Quantity>
+									<swe:uom code="deg"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="z">
+								<swe:Quantity>
+									<swe:uom code="deg"/>
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>									
+						</swe:Vector>					
+					</swe:orientation>
+				</swe:Position>
+			</sml:position>			
+			<!--     接口     -->
+			<sml:interfaces>
+			  <sml:InterfaceList>
+				 <sml:interface name="SWE-OMIsensor_SOS">
+					<sml:InterfaceDefinition>
+					  <sml:serviceLayer>
+						 <swe:DataRecord definition="urn:ogc:def:interface:OGC:1.0:SWEServiceInterface">
+							<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceURL">
+							  <swe:Text>
+								 <swe:value>http://swe.whu.edu.cn:9000/Satellite_Sensor_SOS/sos</swe:value>
+							  </swe:Text>
+							</swe:field>
+							<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceType">
+							  <swe:Text>
+								 <swe:value>SOS</swe:value>
+							  </swe:Text>
+							</swe:field>
+							<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceSpecificSensorID">
+							  <swe:Text>
+								 <swe:value>urn:ogc:object:feature:.........</swe:value>
+							  </swe:Text>
+							</swe:field>
+						 </swe:DataRecord>
+					  </sml:serviceLayer>
+					</sml:InterfaceDefinition>
+				 </sml:interface>
+			  </sml:InterfaceList>
+			</sml:interfaces>
+			<!--     输入     -->
+			<sml:inputs>
+				<sml:InputList>
+					<sml:input name="辐射">
+						<swe:ObservableProperty definition="urn:liesmars:def:phenomenon:radiation"/>
+					</sml:input>
+				</sml:InputList>
+			</sml:inputs>
+			<!--     输出     -->
+			<sml:outputs>
+				<sml:OutputList>
+					<sml:output name="影像数据">
+						<swe:DataArray gml:id="MSscanLine">
+							<swe:elementCount>
+								<swe:Count>
+									<swe:value>3840</swe:value>
+								</swe:Count>
+							</swe:elementCount>
+							<swe:elementType name="pixel">
+							 <swe:Quantity gml:id="scanLine" definition="urn:liesmars:def:property:LIESMARS:1.0:radiance">
+									<swe:uom code="300.mW.cm-2.Sr-1.um-1"/>
+									<swe:constraint>
+										<swe:AllowedValues>
+											<swe:interval>-32767 32767</swe:interval>
+										</swe:AllowedValues>
+									</swe:constraint>
+								</swe:Quantity>
+							</swe:elementType>
+						</swe:DataArray>
+					</sml:output>
+				</sml:OutputList>
+			</sml:outputs>
+			<!--     参数     -->
+			<!--     部件     -->
+		   <!--     关系     -->
+		</sml:System>
+	</sml:member>
+</sml:SensorML>

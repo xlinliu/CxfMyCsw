@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+	</property>
+		<property name="connection.username">c##swe</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="connection.password">orcl</property>
+		<property name="connection.pool.size">15</property>
+		<!-- sql dialect -->
+		<property name="dialect">
+			org.hibernate.dialect.OracleDialect
+	</property>
+		<property name="connection_session_context_class">thread</property>
+		<!-- disable the second-level cache -->
+		<property name="cache.provider_class">
+			org.hibernate.cache.EhCacheProvider
+	</property>
+		<property name="hibernate.connection.SetBigStringTryClob">
+			true
+	</property>
+		<property name="hibernate.jdbc.batch_size">50</property>
+		<property name="hibernate.jdbc.fetch_size">70</property>
+		<!--
+			<property
+			name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+			<property name="hibernate.c3p0.min_size">8</property> <property
+			name="hibernate.c3p0.max_size">20</property> <property
+			name="hibernate.c3p0.timeout">120</property> <property
+			name="hibernate.c3p0.max_statements">100</property> <property
+			name="hibernate.c3p0.idle_test_period">120</property> <property
+			name="hibernate.c3p0.acquire_increment">2</property> <property
+			name="hibernate.c3p0.validate">true</property>
+		-->
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="format_sql">true</property>
+		<property name="show_sql">true</property>
+		<property name="myeclipse.connection.profile">
+			oracle.jdbc.driver.OracleDriver
+	</property>
+		<mapping resource="com/csw/beans/LoginUserBean.hbm.xml" />
+		<mapping resource="com/csw/beans/ProcessBasicInfo.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Action.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Association.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/AuditableEvent.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Classification.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ClassificationNode.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ClassificationScheme.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/EmailAddress.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ExternalIdentifier.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ExternalLink.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ExtrinsicObject.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Federation.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Identifiable.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/InternationalString.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/LocalizedString.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/MyebRIMSmlContents.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Notification.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/NotifyAction.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ObjectRef.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Organization.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Person.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/PersonName.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/PostalAddress.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/QueryExpression.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Registry.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/RegistryObject.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/RegistryPackage.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Service.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/ServiceBinding.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Slot.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SpecificationLink.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/Subscription.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/TelephoneNumber.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/User.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/VersionInfo.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/AdhocQuery.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SensorML.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SensorMLImage.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SensorTypeRule.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SatOrbitJiSuan.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/StandSatSensorPlatformPair.hbm.xml" />
+		<mapping resource="com/csw/model/ebXMLModel/SensorBasciForOracleType.hbm.xml" />
+	</session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.event.JavaBeans.EventIdentificationJBean" table="event_identification_info">
+		<id name="eventid" column="eventid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="eventname" column="event_name" not-null="true"
+			lazy="false" unique="false" length="50">
+		</property>
+		<property name="eventdesc" column="event_desc" not-null="true"
+			lazy="false" unique="false" length="200"></property>
+		<property name="eventPhases" column="event_phases" not-null="true"
+			lazy="false" unique="false" length="4"></property>
+		<property name="userid" column="userid" not-null="true" lazy="false"></property>
+		<property name="uploadtime" column="uploadtime" not-null="true"></property>
+		<many-to-one name="ecjb" cascade="none" update="true"
+			class="com.event.JavaBeans.EventClassificationJBean" column="ecjb_column"
+			lazy="false"></many-to-one>
+		<many-to-one name="estj" cascade="none" update="true"
+			class="com.event.JavaBeans.EventSpaceTimeJBean" column="estj_com"
+			lazy="false"></many-to-one>
+
+	</class>
+</hibernate-mapping>

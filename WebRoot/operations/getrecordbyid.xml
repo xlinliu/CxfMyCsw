@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
+	xmlns:common="http://exslt.org/common" xmlns:gmlns="http://www.opengis.net/gml"
+	xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:sse="http://www.esa.int/mass"
+	xmlns:wrs="http://www.opengis.net/cat/wrs/1.0" service="CSW" version="2.0.2"
+	outputSchema="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+	<Id>SPOT:SP1-19880924T112704493-PT9.024002075195312S.HVN:RP</Id>
+</GetRecordById>

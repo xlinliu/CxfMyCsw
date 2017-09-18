@@ -1,0 +1,486 @@
+<SensorML version="1.0.1" xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd" xmlns="http://www.opengis.net/sensorML/1.0.1" xmlns:gml="http://www.opengis.net/gml" xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <member>
+    <!--================-->
+    <!--  卫星传感器平台 -->
+    <!--================-->
+    <System gml:id="RemoteSensorPlatform">
+      <gml:description>地中海盆地观测小卫星系列1号COSMO-SkyMed-1，其上搭载合成孔径雷达SAR-2000，可对海洋，陆地和冰川进行多功能高分辨率成像，被广泛应用于环境监测，风险评估和监测等诸多方面。</gml:description>
+      <gml:name>卫星传感器平台</gml:name>
+	  <!--====================-->
+      <!--  平台标签==>关键词  -->
+	  <!--====================-->
+      <keywords>
+        <KeywordList>
+          <keyword>遥感</keyword>
+          <keyword>COSMO-SkyMed-1</keyword>
+          <keyword>地中海盆地观测小卫星系列1号</keyword>
+          <keyword>SAR-2000</keyword>
+          <keyword>陆表拓扑</keyword>
+          <keyword>植被监测</keyword>
+          <keyword>地表多功能成像</keyword>
+          <keyword>雪覆盖监测</keyword>
+          <keyword>海冰覆盖监测</keyword>
+        </KeywordList>
+      </keywords>
+	  <!--====================-->
+      <!--  平台标签==>标示符  -->
+	  <!--====================-->
+      <identification>
+        <IdentifierList>
+          <identifier name="标识码">
+            <Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+              <value>urn:ogc:feature:remotesensor:platform:COSMO-SkyMed-1</value>
+            </Term>
+          </identifier>
+          <identifier name="全称">
+            <Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+              <value>地中海盆地观测小卫星系列1号</value>
+            </Term>
+          </identifier>
+          <identifier name="简称">
+            <Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+              <value>COSMO-SkyMed-1</value>
+            </Term>
+          </identifier>
+          <identifier name="搭载传感器标识码">
+            <Term definition="urn:ogc:def:identifier:OGC:1.0:associatedSensorUniqueID">
+              <value>urn:ogc:feature:remotesensor:SAR-2000</value>
+            </Term>
+          </identifier>
+          <identifier name="搭载传感器名称">
+            <Term definition="urn:ogc:def:identifier:OGC:1.0:associatedSensorName">
+              <value>SAR-2000</value>
+            </Term>
+          </identifier>
+        </IdentifierList>
+      </identification>
+	  <!--====================-->
+      <!--  平台标签==>分类器  -->
+	  <!--====================-->
+      <classification>
+        <ClassifierList>
+          <classifier name="平台类型">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:platformType">
+              <value>遥感卫星</value>
+            </Term>
+          </classifier>
+          <classifier name="卫星类型">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:sensorType">
+              <value>陆地卫星</value>
+            </Term>
+          </classifier>
+          <classifier name="轨道类型">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:orbitType">
+              <value>太阳同步轨道</value>
+            </Term>
+          </classifier>
+          <classifier name="预期应用">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+              <value>陆表拓扑</value>
+            </Term>
+          </classifier>
+          <classifier name="预期应用">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+              <value>植被监测</value>
+            </Term>
+          </classifier>
+          <classifier name="预期应用">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+              <value>地表多功能成像</value>
+            </Term>
+          </classifier>
+          <classifier name="预期应用">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+              <value>雪覆盖监测</value>
+            </Term>
+          </classifier>
+          <classifier name="预期应用">
+            <Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+              <value>海冰覆盖监测</value>
+            </Term>
+          </classifier>
+        </ClassifierList>
+      </classification>
+	  <!--===========================-->
+      <!--  平台互操作服务==>有效时间  -->
+	  <!--===========================-->
+      <validTime>
+        <gml:TimePeriod gml:id="卫星平台有效时间">
+          <gml:beginPosition>2007-06-08T00:00:00.0Z</gml:beginPosition>
+          <gml:endPosition>2014-06-08T00:00:00.0Z</gml:endPosition>
+        </gml:TimePeriod>
+      </validTime>
+	  <!--======================-->
+      <!--  平台特征==>物理特征  -->
+	  <!--======================-->
+      <characteristics>
+        <swe:DataRecord definition="urn:ogc:def:property:Liesmars:physicalProperties">
+          <swe:field name="长度">
+            <swe:Quantity definition="urn:ogc:def:property:length">
+              <swe:uom code="m" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="宽度">
+            <swe:Quantity definition="urn:ogc:def:property:width">
+              <swe:uom code="m" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="高度">
+            <swe:Quantity definition="urn:ogc:def:property:height">
+              <swe:uom code="m" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="质量">
+            <swe:Quantity definition="urn:ogc:def:property:weight">
+              <swe:uom code="kg" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="电流">
+            <swe:Quantity definition="urn:ogc:def:property:current">
+              <swe:uom code="A" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field> 
+          <swe:field name="电压">
+            <swe:Quantity definition="urn:ogc:def:property:voltage">
+              <swe:uom code="V" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field> 
+          <swe:field name="功率">
+            <swe:Quantity definition="urn:ogc:def:property:power">
+              <swe:uom code="W" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="设计寿命">
+            <swe:Quantity definition="urn:ogc:def:property:designedLife">
+              <swe:uom code="year" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="有效载荷">
+            <swe:Quantity definition="urn:ogc:def:property:payload">
+              <swe:uom code="kg" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+        </swe:DataRecord>
+      </characteristics>
+	  <!--======================-->
+      <!--  平台能力==>定位能力  -->
+	  <!--======================-->
+      <characteristics>
+        <swe:DataRecord definition="urn:ogc:def:property:Liesmars:physicalProperties">
+          <swe:field name="发射时间">
+            <swe:Time definition="urn:ogc:def:property:epochTime">
+              <swe:value>2007-06-08</swe:value>
+            </swe:Time>
+          </swe:field>
+          <swe:field name="轨道高度">
+            <swe:Quantity definition="urn:ogc:def:property:averageOrbitHeight">
+              <swe:uom code="km" />
+              <swe:value>620</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="轨道周期">
+            <swe:Quantity definition="urn:ogc:def:property:orbitCycle">
+              <swe:uom code="min" />
+              <swe:value>97.1</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="重访周期">
+            <swe:Quantity definition="urn:ogc:def:property:revisitingPeriod">
+              <swe:uom code="d" />
+              <swe:value>16</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="轨道倾角">
+            <swe:Quantity definition="urn:ogc:def:property:orbitInclination">
+              <swe:uom code="deg" />
+              <swe:value>97.8</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="降交点地方时">
+            <swe:Text definition="urn:ogc:def:property:LocalTimeOfDescendinNode ">
+              <swe:value>6:00AM(示例)</swe:value>
+            </swe:Text>
+          </swe:field>
+          <swe:field name="升交点赤经">
+            <swe:Quantity definition="urn:ogc:def:property:orbitRigthAscension">
+              <swe:uom code="deg" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="偏心率">
+            <swe:Quantity definition="urn:ogc:def:property:orbitEccentricity">
+              <swe:uom code="%" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="近地点幅角">
+            <swe:Quantity definition="urn:ogc:def:property:orbitArgumentOfPerigee">
+              <swe:uom code="deg" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="平近点角">
+            <swe:Quantity definition="urn:ogc:def:property:orbitMeanAnomaly">
+              <swe:uom code="deg" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="平运动角">
+            <swe:Quantity definition="urn:ogc:def:property:orbitMeanMotion">
+              <swe:uom code="circ/d" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="衰减率">
+            <swe:Quantity definition="urn:ogc:def:property:orbitDecayRate">
+              <swe:uom code="circ/d2" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+        </swe:DataRecord>
+      </characteristics>
+	  <!--======================-->
+      <!--  平台能力==>定位能力  -->
+	  <!--======================-->
+      <capabilities>
+        <swe:DataRecord definition="urn:ogc:def:property:Liesmars:GeoPositionCapability">
+          <swe:field name="observedBBOX">
+            <swe:Envelope definition="urn:ogc:def:property:OGC:1.0:observedBBOX" referenceFrame="urn:ogc:def:crs:EPSG:4326">
+              <swe:lowerCorner>
+                <swe:Vector>
+                  <swe:coordinate name="纬度">
+                    <swe:Quantity axisID="y">
+                      <swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+                      <swe:value>-90</swe:value>
+                    </swe:Quantity>
+                  </swe:coordinate>
+                  <swe:coordinate name="经度">
+                    <swe:Quantity axisID="x">
+                      <swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+                      <swe:value>-180</swe:value>
+                    </swe:Quantity>
+                  </swe:coordinate>
+                </swe:Vector>
+              </swe:lowerCorner>
+              <swe:upperCorner>
+                <swe:Vector>
+                  <swe:coordinate name="纬度">
+                    <swe:Quantity axisID="y">
+                      <swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+                      <swe:value>90</swe:value>
+                    </swe:Quantity>
+                  </swe:coordinate>
+                  <swe:coordinate name="经度">
+                    <swe:Quantity axisID="x">
+                      <swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+                      <swe:value>180</swe:value>
+                    </swe:Quantity>
+                  </swe:coordinate>
+                </swe:Vector>
+              </swe:upperCorner>
+            </swe:Envelope>
+          </swe:field>
+          <swe:field name="TLE卫星标识码">
+            <swe:Text definition="urn:ogc:def:property:TLESatID">
+              <swe:value>TLE标准卫星名称</swe:value>
+            </swe:Text>
+          </swe:field>
+          <swe:field name="TLE轨道参数1">
+            <swe:Text definition="urn:ogc:def:property:TLELineOne">
+              <swe:value>00</swe:value>
+            </swe:Text>
+          </swe:field>
+          <swe:field name="TLE轨道参数2">
+            <swe:Text definition="urn:ogc:def:property:TLELineTwo">
+              <swe:value>00</swe:value>
+            </swe:Text>
+          </swe:field>
+        </swe:DataRecord>
+      </capabilities>
+	  <!--======================-->
+      <!--  平台能力==>计算能力  -->
+	  <!--======================-->
+      <capabilities>
+        <swe:DataRecord definition="urn:ogc:def:property:Liesmars:computingCapability">
+          <swe:field name="存储容量">
+            <swe:Quantity definition="urn:ogc:def:property:storage">
+              <swe:uom code="GB" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="数据速率">
+            <swe:Quantity definition="urn:ogc:def:property:dataRate">
+              <swe:uom code="Mbps" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+        </swe:DataRecord>
+      </capabilities>
+	  <!--======================-->
+      <!--  平台能力==>通信能力  -->
+	  <!--======================-->
+      <capabilities>
+        <swe:DataRecord definition="urn:ogc:def:property:Liesmars:communicationCapability">
+          <swe:field name="数传模式">
+            <swe:Category definition="urn:ogc:def:property:dataTransmissionMode">
+              <swe:value>中继星下传/直接下传/实时传输/存储传输（选一）</swe:value>
+            </swe:Category>
+          </swe:field>
+          <swe:field name="遥测波段">
+            <swe:Category definition="urn:ogc:def:property:controlWaveBand">
+              <swe:value>S波段/X波段等等</swe:value>
+            </swe:Category>
+          </swe:field>
+          <swe:field name="数据下行波段">
+            <swe:Category definition="urn:ogc:def:property:downlinkWaveBand">
+              <swe:value>S波段/X波段等等</swe:value>
+            </swe:Category>
+          </swe:field>
+          <swe:field name="数据下行速率">
+            <swe:Quantity definition="urn:ogc:def:property:downlinkRate">
+              <swe:uom code="Mbps" />
+              <swe:value>00</swe:value>
+            </swe:Quantity>
+          </swe:field>
+          <swe:field name="通信接口">
+            <swe:Category definition="urn:ogc:def:property:communicationInterface">
+              <swe:value>RS232/USB（示例）</swe:value>
+            </swe:Category>
+          </swe:field>
+        </swe:DataRecord>
+      </capabilities>
+	  <!--===========================-->
+      <!--  平台互操作服务==>联系单位  -->
+	  <!--===========================-->
+      <contact xlink:arcrole="urn:ogc:def:role:operator">
+        <ResponsibleParty>
+          <individualName>11</individualName>
+          <organizationName>意大利宇航局(ASI)</organizationName>
+          <contactInfo>
+            <phone>
+              <voice>1</voice>
+              <facsimile>1</facsimile>
+            </phone>
+            <address>
+              <deliveryPoint>1</deliveryPoint>
+              <city>11</city>
+              <administrativeArea>1</administrativeArea>
+              <postalCode>1</postalCode>
+              <country>1</country>
+              <electronicMailAddress>1</electronicMailAddress>
+            </address>
+          </contactInfo>
+        </ResponsibleParty>
+      </contact>
+      <!--======================-->
+      <!--  平台能力==>定位能力  -->
+	  <!--======================-->
+      <spatialReferenceFrame>
+		<gml:EngineeringCRS gml:id="S1">
+			<gml:srsName></gml:srsName>
+			<gml:usesCS></gml:usesCS>
+			<gml:usesEngineeringDatum></gml:usesEngineeringDatum>
+		</gml:EngineeringCRS>
+	  </spatialReferenceFrame>
+	  <temporalReferenceFrame>
+		<gml:TemporalCRS gml:id="T1">
+			<gml:srsName></gml:srsName>
+			<gml:usesTemporalCS></gml:usesTemporalCS>
+			<gml:usesTemporalDatum></gml:usesTemporalDatum>
+		</gml:TemporalCRS>
+	  </temporalReferenceFrame>
+      <position name="平台位置">
+        <swe:Position fixed="false" referenceFrame="urn:ogc:def:crs:EPSG:4329">
+          <swe:location>
+            <swe:Vector definition="urn:ogc:def:property:OGC:location">
+              <swe:coordinate name="纬度">
+                <swe:Quantity axisID="y" definition="urn:ogc:def:property:OGC:latitude">
+                  <swe:uom code="deg" />
+                  <swe:value>99999</swe:value>
+                </swe:Quantity>
+              </swe:coordinate>
+              <swe:coordinate name="经度">
+                <swe:Quantity axisID="x" definition="urn:ogc:def:property:OGC:longitude">
+                  <swe:uom code="deg" />
+                  <swe:value>99999</swe:value>
+                </swe:Quantity>
+              </swe:coordinate>
+              <swe:coordinate name="高度">
+                <swe:Quantity axisID="z" definition="urn:ogc:def:property:OGC:altitude">
+                  <swe:uom code="m" />
+                  <swe:value>999999</swe:value>
+                </swe:Quantity>
+              </swe:coordinate>
+            </swe:Vector>
+          </swe:location>
+        </swe:Position>
+      </position>
+	  <!--===========================-->
+      <!--  平台互操作服务==>服务接口  -->
+	  <!--===========================-->
+      <interfaces>
+        <InterfaceList>
+          <interface name="COSMO-SkyMed-1_SOS">
+            <InterfaceDefinition>
+              <serviceLayer>
+                <swe:DataRecord definition="urn:ogc:def:interface:OGC:1.0:SWEServiceInterface">
+                  <swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceURL">
+                    <swe:Text>
+                      <swe:value>http://swe.whu.edu.cn:9000/SOS/sos</swe:value>
+                    </swe:Text>
+                  </swe:field>
+                  <swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceType">
+                    <swe:Text>
+                      <swe:value>SOS</swe:value>
+                    </swe:Text>
+                  </swe:field>
+                  <swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceSpecificSensorID">
+                    <swe:Text>
+                      <swe:value>urn:ogc:feature:remotesensor:platform:COSMO-SkyMed-1</swe:value>
+                    </swe:Text>
+                  </swe:field>
+                </swe:DataRecord>
+              </serviceLayer>
+            </InterfaceDefinition>
+          </interface>
+        </InterfaceList>
+      </interfaces>
+	  <!--============-->
+      <!--  输入输出  -->
+	  <!--============-->
+      <inputs>
+        <InputList>
+          <input name="辐射">
+            <swe:ObservableProperty definition="urn:ogc:def:property:OGC:1.0:radiation" />
+          </input>
+        </InputList>
+      </inputs>
+      <outputs>
+        <OutputList>
+          <output name="影像">
+            <swe:Quantity definition="urn:ogc:def:property:OGC:1.0:image">
+              <swe:uom code="pix" />
+            </swe:Quantity>
+          </output>
+        </OutputList>
+      </outputs>
+	  <!--============-->
+      <!--  组成部件  -->
+	  <!--============-->
+      <components>
+        <ComponentList>
+          <component name="SAR-2000_COSMO-SkyMed-1" xlink:href="urn:ogc:feature:remotesensor:SAR-2000_COSMO-SkyMed-1" />
+        </ComponentList>
+      </components>
+    </System>
+  </member>
+</SensorML>

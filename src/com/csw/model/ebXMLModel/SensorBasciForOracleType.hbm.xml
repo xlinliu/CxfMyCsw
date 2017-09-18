@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.csw.model.ebXMLModel.SensorBasciForOracleType"
+		table="sensorbasictype" dynamic-insert="true" dynamic-update="true">
+		<id column="sensorid" name="SENSORID" length="200">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="SENSORBBOX" column="sensorbbox" length="200"></property>
+		<property name="SENSORBEGINTIME" column="sensorbegintime"
+			length="200"></property>
+		<property name="SENSORENDTIME" column="sensorendtime" length="200"></property>
+		<property name="SENSORINTENDAPP" column="sensorintendapp"
+			length="200"></property>
+		<property name="SENSORKEYWORD" column="sensorkeywords"
+			length="200"></property>
+		<property name="SENSORLONGNAME" column="sensorlongname"
+			length="200"></property>
+		<property name="SENSOROPERABLE" column="sensoroperable"
+			length="200"></property>
+		<property name="SENSORORGAN" column="sensororgan" length="200"></property>
+		<property name="SENSOROWNER" column="sensorowner" length="200"></property>
+		<property name="SENSORPOS" column="sensorpos" length="200"></property>
+		<property name="SENSORPUBLIC" column="sensorpublic" length="200"></property>
+		<property name="SENSORSOSURL" column="SENSORSOSURL" length="200"></property>
+		<property name="SENSORSHORTNAME" column="sensorshortname"
+			length="200"></property>
+		<property name="SENSORTYPE" column="sensortype" length="200"></property>
+	</class>
+</hibernate-mapping>

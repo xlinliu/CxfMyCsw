@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.csw.beans.LoginUserBean" table="userss"
+		dynamic-insert="true" dynamic-update="true">
+		<id name="outid" column="outid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="username" column="username"></property>
+		<property name="password" column="passwords"></property>
+		<property name="gender" column="gender"></property>
+		<property name="age" column="age"></property>
+		<property name="telephone" column="telephone"></property>
+		<property name="emailAddress" column="emailaddress"></property>
+		<property name="zhiye" column="zhiye"></property>
+		<property name="address" column="address"></property>
+		<property name="level" column="levelss"></property>
+	</class>
+</hibernate-mapping>

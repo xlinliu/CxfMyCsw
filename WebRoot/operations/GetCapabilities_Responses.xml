@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-fragment version="aslfjslkfj">
+	<ows:ServiceIdentification xmlns:ows="http://www.opengis.net/ows">
+		<ows:Title>title </ows:Title>
+		<ows:Abstract>adslfjlaskdjfkljsadlfjkalsjdfkasldfajsdflkjalksdfjklasdfjkl</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>水文</ows:Keyword>
+			<ows:Keyword>雨量计</ows:Keyword>
+			<ows:Type>水文</ows:Type>
+		</ows:Keywords>
+		<ows:ServiceType codeSpace="雨量" xsi:nil="true"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+		<ows:ServiceTypeVersion>yxliang</ows:ServiceTypeVersion>
+		<ows:ServiceTypeVersion>sakdlfjalksd</ows:ServiceTypeVersion>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider xmlns:ows="http://www.opengis.net/ows">
+		<ows:ProviderSite xlin:title="providerSite"
+			xlin:type="providerSite.type" xlin:arcrole="providersite.arcrole"
+			xlin:role="alsdjflkas" xmlns:xlin="http://www.w3.org/1999/xlink" />
+		<ows:ServiceContact>
+			<ows:IndividualName>IndividualName</ows:IndividualName>
+			<ows:PositionName>saldjflasdjf</ows:PositionName>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata xmlns:ows="http://www.opengis.net/ows">
+		<ows:Operation name="GetRecords">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://www.baidu.com" xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+			<ows:Parameter name="parame1" xsi:nil="true"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<ows:Value>asldkjflas,sadfjaslkdfj</ows:Value>
+				<ows:Value>dsalfjklsdjf</ows:Value>
+				<ows:Value>aslkdjfaklsjdfkl</ows:Value>
+			</ows:Parameter>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<ogc:Filter_Capabilities xmlns:ogc="http://www.opengis.net/ogc">
+		<ogc:Spatial_Capabilities xsi:nil="true"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<ogc:GeometryOperands>
+				<ogc:GeometryOperand>gml:Point</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:Envelope</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:LineString</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:Polygon</ogc:GeometryOperand>
+			</ogc:GeometryOperands>
+			<ogc:SpatialOperators>
+				<ogc:SpatialOperator name="BBOX" />
+				<ogc:SpatialOperator name="Equals" />
+				<ogc:SpatialOperator name="Disjoint" />
+				<ogc:SpatialOperator name="Intersects" />
+				<ogc:SpatialOperator name="Touches" />
+				<ogc:SpatialOperator name="Crosses" />
+				<ogc:SpatialOperator name="Within" />
+				<ogc:SpatialOperator name="Contains" />
+				<ogc:SpatialOperator name="Overlaps" />
+				<ogc:SpatialOperator name="Beyond" />
+				<ogc:SpatialOperator name="DWithin" />
+			</ogc:SpatialOperators>
+		</ogc:Spatial_Capabilities>
+		<ogc:Scalar_Capabilities>
+			<ogc:LogicalOperators />
+			<ogc:ComparisonOperators>
+				<ogc:ComparisonOperator>LessThan</ogc:ComparisonOperator>
+			</ogc:ComparisonOperators>
+			<ogc:ComparisonOperators>
+				<ogc:ComparisonOperator>GreaterThan</ogc:ComparisonOperator>
+			</ogc:ComparisonOperators>
+			<ogc:ComparisonOperators>
+				<ogc:ComparisonOperator>LessThanEqualTo</ogc:ComparisonOperator>
+			</ogc:ComparisonOperators>
+		</ogc:Scalar_Capabilities>
+		<ogc:Id_Capabilities>
+			<ogc:FID xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+		</ogc:Id_Capabilities>
+	</ogc:Filter_Capabilities>
+</xml-fragment>

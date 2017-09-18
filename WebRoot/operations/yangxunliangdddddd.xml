@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SensorML version="1.0.1"
+	xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
+	xmlns="http://www.opengis.net/sensorML/1.0.1" xmlns:gml="http://www.opengis.net/gml"
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<member>
+		<!--========-->
+		<!--  satellite sensors -->
+		<!--========-->
+		<System gml:id="RemoteSensorScanner">
+			<gml:description>Data on biological and physical processes on the surface of the Earth and in the lower atmosphere, and on global dynamics. Surface temperatures of land and ocean, chlorophyll fluorescence, land cover measurements, cloud cover (day and night)</gml:description>
+			<gml:name>MODerate-Resolution Imaging Spectroradiometer</gml:name>
+			<!--    keywords     -->
+			<keywords>
+				<KeywordList>
+					<keyword>Remote Sensing</keyword>
+					<keyword>AQUA</keyword>
+					<keyword>MODIS</keyword>
+					<keyword>Medium-resolution</keyword>
+					<keyword>spectro-radiometer</keyword>
+					<keyword>surface</keyword>
+					<keyword>ocean</keyword>
+					<keyword>vegation</keyword>
+					<keyword>ozone</keyword>
+				</KeywordList>
+			</keywords>
+			<!--    Indentification     -->
+			<identification>
+				<IdentifierList>
+					<identifier name="uniqueID">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+							<value>urn:ogc:feature:remotesensor:scanner:MODIS_AQUA</value>
+						</Term>
+					</identifier>
+					<identifier name="longName">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+							<value>中分辨率成像光谱仪</value>
+						</Term>
+					</identifier>
+					<identifier name="shortName">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+							<value>MODIS</value>
+						</Term>
+					</identifier>
+					<identifier name="parentSystemUniqueId">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:parentSystemUniqueId">
+							<value>urn:ogc:feature:remotesensor:platform:AQUA</value>
+						</Term>
+					</identifier>
+				</IdentifierList>
+			</identification>
+			<!--    Classification     -->
+			<classification>
+				<ClassifierList>
+					<classifier name="sensorType">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:sensorType">
+							<value>scanning imager</value>
+						</Term>
+					</classifier>
+					<classifier name="scannerType">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:scannerType">
+							<value>pushbroom</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>earth observation</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>surface</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>cloud boundary and characteristics</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+							<value>ocean</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>phytoplankton</value>
+						</Term>
+					</classifier>
+					<classifier name="intendedApplication">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>ozone</value>
+						</Term>
+					</classifier>
+				</ClassifierList>
+			</classification>
+			<!--    validtime     -->
+			<validTime>
+				<gml:TimePeriod gml:id="validtime">
+					<gml:beginPosition>2002-05-04T00:00:00.0Z</gml:beginPosition>
+					<gml:endPosition>2014-05-04T00:00:00.0Z</gml:endPosition>
+				</gml:TimePeriod>
+			</validTime>
+			<!--    characteristics    -->
+			<characteristics>
+				<swe:DataRecord definition="urn:ogc:def:property:Liesmars:physicalProperties">
+					<swe:field name="length">
+						<swe:Quantity definition="urn:ogc:def:property:length">
+							<swe:uom code="m" />
+							<swe:value>1</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="height">
+						<swe:Quantity definition="urn:ogc:def:property:height">
+							<swe:uom code="m" />
+							<swe:value>1.6</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="width">
+						<swe:Quantity definition="urn:ogc:def:property:width">
+							<swe:uom code="m" />
+							<swe:value>1</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="weight">
+						<swe:Quantity definition="urn:ogc:def:property:weight">
+							<swe:uom code="kg" />
+							<swe:value>250</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="power">
+						<swe:Quantity definition="urn:ogc:def:property:power">
+							<swe:uom code="W" />
+							<swe:value>163</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="designedLife">
+						<swe:Quantity definition="urn:ogc:def:property:designedLife">
+							<swe:uom code="year" />
+							<swe:value>5</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="canSideSwing">
+						<swe:Boolean definition="urn:ogc:def:property:canSideSwing">
+							<swe:value>false</swe:value>
+						</swe:Boolean>
+					</swe:field>
+					<swe:field name="dynamicRange">
+						<swe:Quantity definition="urn:ogc:def:property:dynamicRange">
+							<swe:uom code="bit" />
+							<swe:value>12</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="swath">
+						<swe:Quantity definition="urn:ogc:def:property:swath">
+							<swe:uom code="km" />
+							<swe:value>2330</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="fov">
+						<swe:Quantity definition="urn:ogc:def:property:fov">
+							<swe:uom code="deg" />
+							<swe:value>55</swe:value>
+						</swe:Quantity>
+					</swe:field>
+				</swe:DataRecord>
+			</characteristics>
+
+			<!--   capabilities    -->
+			<capabilities>
+				<swe:DataRecord
+					definition="urn:ogc:def:property:Liesmars:measurementCapabilities">
+					<swe:field name="observedBBOX">
+						<swe:Envelope definition="urn:ogc:def:property:OGC:1.0:observedBBOX"
+							referenceFrame="urn:ogc:def:crs:EPSG:4326">
+							<swe:lowerCorner>
+								<swe:Vector>
+									<swe:coordinate name="lantitude">
+										<swe:Quantity axisID="y">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>-90</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="longtitude">
+										<swe:Quantity axisID="x">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>-180</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:lowerCorner>
+							<swe:upperCorner>
+								<swe:Vector>
+									<swe:coordinate name="latitude">
+										<swe:Quantity axisID="y">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>90</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="longtitue">
+										<swe:Quantity axisID="x">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>180</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:upperCorner>
+						</swe:Envelope>
+					</swe:field>
+					<swe:field name="temporalResolutionRange">
+						<swe:QuantityRange definition="urn:ogc:def:property:temporalResolutionRange">
+							<swe:uom code="d" />
+							<swe:value>16 16</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="spatialResolutionRange">
+						<swe:QuantityRange definition="urn:ogc:def:property:spatialResolutionRange">
+							<swe:uom code="m" />
+							<swe:value>250 1000</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="spectrumResolutionRange">
+						<swe:QuantityRange definition="urn:ogc:def:property:spectrumResolutionRange">
+							<swe:uom code="um" />
+							<swe:value>0.4 14.4</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+				</swe:DataRecord>
+			</capabilities>
+			<!--     contact      -->
+			<contact xlink:arcrole="urn:ogc:def:role:operator">
+				<ResponsibleParty>
+					<organizationName>LIESMARS, Wuhan University, China</organizationName>
+				</ResponsibleParty>
+			</contact>
+			<!--    position    -->
+			<position name="position">
+				<swe:Position fixed="false" referenceFrame="urn:ogc:def:crs:EPSG:4329">
+					<swe:location>
+						<swe:Vector definition="urn:ogc:def:property:OGC:location">
+							<swe:coordinate name="latitude">
+								<swe:Quantity axisID="y"
+									definition="urn:ogc:def:property:OGC:latitude">
+									<swe:uom code="deg" />
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="longitude">
+								<swe:Quantity axisID="x"
+									definition="urn:ogc:def:property:OGC:longitude">
+									<swe:uom code="deg" />
+									<swe:value>99999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+							<swe:coordinate name="altitude">
+								<swe:Quantity axisID="z"
+									definition="urn:ogc:def:property:OGC:altitude">
+									<swe:uom code="m" />
+									<swe:value>999999</swe:value>
+								</swe:Quantity>
+							</swe:coordinate>
+						</swe:Vector>
+					</swe:location>
+				</swe:Position>
+			</position>
+			<!--   interfaces     -->
+			<interfaces>
+				<InterfaceList>
+					<interface name="MODIS_SOS">
+						<InterfaceDefinition>
+							<serviceLayer>
+								<swe:DataRecord
+									definition="urn:ogc:def:interface:OGC:1.0:SWEServiceInterface">
+									<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceURL">
+										<swe:Text>
+											<swe:value>http://swe.whu.edu.cn:9000/MODISSOS/sos
+											</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceType">
+										<swe:Text>
+											<swe:value>SOS</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field
+										name="urn:ogc:def:interface:OGC:1.0:ServiceSpecificSensorID">
+										<swe:Text>
+											<swe:value>urn:ogc:feature:remotesensor:scanner:MODIS_AQUA
+											</swe:value>
+										</swe:Text>
+									</swe:field>
+								</swe:DataRecord>
+							</serviceLayer>
+						</InterfaceDefinition>
+					</interface>
+				</InterfaceList>
+			</interfaces>
+			<!--      inputs       -->
+			<inputs>
+				<InputList>
+					<input name="radiation">
+						<swe:ObservableProperty definition="urn:ogc:def:property:OGC:1.0:radiation" />
+					</input>
+				</InputList>
+			</inputs>
+			<!--      outputs      -->
+			<outputs>
+				<OutputList>
+					<output name="MSC-RED">
+
+					</output>
+					<output name="MSC-GREEN" xlink:href="#MSscanLine" />
+					<output name="MSC-NIR" xlink:href="#MSscanLine" />
+				</OutputList>
+			</outputs>
+			<!--     Components    -->
+			<components>
+				<ComponentList>
+					<component name="MSC-RED-Detector" xlink:href="urn:liesmars:id:BJ-1-MSC-RED-Detector" />
+					<component name="MSC-GREEN-Detector" xlink:href="urn:liesmars:id:BJ-1-MSC-GREEN-Detector" />
+					<component name="MSC-NIR-Detector" xlink:href="urn:liesmars:id:BJ-1-MSC-NIR-Detector" />
+					<component name="clock" xlink:href="urn:liesmars:id:BJ-1-clock" />
+				</ComponentList>
+			</components>
+			<!--     Connections    -->
+			<connections>
+				<ConnectionList>
+					<!--     Input Connections    -->
+					<connection name="inputToREDDetector">
+						<Link>
+							<source ref="this/inputs/radiation" />
+							<destination ref="MSC-RED-Detector/inputs/input" />
+						</Link>
+					</connection>
+					<connection>
+						<Link>
+							<source ref="this/inputs/radiation" />
+							<destination ref="MSC-RED-Detector/inputs/input" />
+						</Link>
+					</connection>
+					<!--     Output Connections    -->
+					<connection>
+						<Link>
+							<source ref="clock/outputs/time" />
+							<destination ref="this/outputs/time" />
+						</Link>
+					</connection>
+					<connection>
+						<Link>
+							<source ref="MSC-RED-Detector/outputs/scanLine" />
+							<destination ref="this/outputs/MSC-RED" />
+						</Link>
+					</connection>
+				</ConnectionList>
+			</connections>
+		</System>
+	</member>
+</SensorML>
+

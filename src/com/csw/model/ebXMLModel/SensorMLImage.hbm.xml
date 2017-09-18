@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.csw.model.ebXMLModel.SensorMLImage" table="sensormlimage"
+		dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="sensorid" column="sensorid"></property>
+		<property name="sensorimgurl" column="sensorimgurl"></property>
+		<property name="savetime" column="savetime" type="timestamp"></property>
+		<property name="attchmentmarker" column="attchmentmarker"></property>
+		<property name="owner" column="owner"></property>
+	</class>
+</hibernate-mapping>

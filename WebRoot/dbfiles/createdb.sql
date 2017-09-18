@@ -1,0 +1,681 @@
+-------------创建用户，如果没有swe账户-----------------------
+--create user swe identified by swe;
+--grant create session, resource to swe;
+--commit;
+--------------------------------------------------------
+--------------------------------------------------------
+--  文件已创建 - 星期六-十一月-15-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table ADHOCQUERY
+--------------------------------------------------------
+
+  CREATE TABLE "ADHOCQUERY" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"QUERYEXPRESSION" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table ARTICLE_RDFS_DATA
+--------------------------------------------------------
+
+  CREATE TABLE "ARTICLE_RDFS_DATA" 
+   (	"ID" NUMBER
+   );
+--------------------------------------------------------
+--  DDL for Table ASSOCIATION
+--------------------------------------------------------
+
+  CREATE TABLE "ASSOCIATION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"ASSOCIATIONTYPE" VARCHAR2(255 BYTE), 
+	"SOURCEOBJECT" VARCHAR2(255 BYTE), 
+	"TARGETOBJECT" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table AUDITABLEEVENT
+--------------------------------------------------------
+
+  CREATE TABLE "AUDITABLEEVENT" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"EVENTTYPE" VARCHAR2(255 BYTE), 
+	"REQUESTID" VARCHAR2(255 BYTE), 
+	"USERS" VARCHAR2(255 BYTE), 
+	"TIMESTAMP" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table CLASSIFICATION
+--------------------------------------------------------
+
+  CREATE TABLE "CLASSIFICATION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"NODEREPRESENTATION" VARCHAR2(255 BYTE), 
+	"CLASSIFICATIONNODE" VARCHAR2(255 BYTE), 
+	"CLASSIFICATIONSCHEME" VARCHAR2(255 BYTE), 
+	"CLASSIFIEDOBJECT" VARCHAR2(255 BYTE), 
+	"CLASSIFICATION_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table CLASSIFICATIONNODE
+--------------------------------------------------------
+
+  CREATE TABLE "CLASSIFICATIONNODE" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"PATH" VARCHAR2(255 BYTE), 
+	"CODE" VARCHAR2(255 BYTE), 
+	"PARENT" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table CLASSIFICATIONSCHEME
+--------------------------------------------------------
+
+  CREATE TABLE "CLASSIFICATIONSCHEME" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"ISITERNAL" NUMBER(1,0), 
+	"NODETYPE" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table CSWACTION
+--------------------------------------------------------
+
+  CREATE TABLE "CSWACTION" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table CSW_TEMP
+--------------------------------------------------------
+
+  CREATE TABLE "CSW_TEMP" 
+   (	"RDF$STC_SUB" VARCHAR2(4000 BYTE), 
+	"RDF$STC_PRED" VARCHAR2(4000 BYTE), 
+	"RDF$STC_OBJ" VARCHAR2(4000 BYTE), 
+	"RDF$STC_SUB_EXT" VARCHAR2(64 BYTE), 
+	"RDF$STC_PRED_EXT" VARCHAR2(64 BYTE), 
+	"RDF$STC_OBJ_EXT" VARCHAR2(64 BYTE), 
+	"RDF$STC_CANON_EXT" VARCHAR2(64 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table EMAILADDRESS
+--------------------------------------------------------
+
+  CREATE TABLE "EMAILADDRESS" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"ADDRESS" VARCHAR2(255 BYTE), 
+	"TYPE" VARCHAR2(255 BYTE), 
+	"EMAILADDRESS_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table EXTERNALIDENTIFIER
+--------------------------------------------------------
+
+  CREATE TABLE "EXTERNALIDENTIFIER" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"IDENTIFICATIONSCHEME" VARCHAR2(255 BYTE), 
+	"REGISTRYOBJECT" VARCHAR2(255 BYTE), 
+	"VALUE" VARCHAR2(255 BYTE), 
+	"EXTERNALIDENTIFIER_ID" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table EXTERNALLINK
+--------------------------------------------------------
+
+  CREATE TABLE "EXTERNALLINK" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"EXTERNALURI" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table EXTRINSICOBJECT
+--------------------------------------------------------
+
+  CREATE TABLE "EXTRINSICOBJECT" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"LNAME" VARCHAR2(255 BYTE), 
+	"MIMETYPE" VARCHAR2(255 BYTE), 
+	"ISOPAQUE" NUMBER(1,0), 
+	"CONTENTVERSIONINFO" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table FEDERATION
+--------------------------------------------------------
+
+  CREATE TABLE "FEDERATION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"REPLICATIONSYNCLATENCY" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table IDENTIFIABLE
+--------------------------------------------------------
+
+  CREATE TABLE "IDENTIFIABLE" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"IDENTIFIABLE_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table INTERNATIONALSTRING
+--------------------------------------------------------
+
+  CREATE TABLE "INTERNATIONALSTRING" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table LOCALIZEDSTRING
+--------------------------------------------------------
+
+  CREATE TABLE "LOCALIZEDSTRING" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"LANG" VARCHAR2(255 BYTE), 
+	"VALUE" VARCHAR2(255 BYTE), 
+	"CHARSET" VARCHAR2(255 BYTE), 
+	"LOCALIZED_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table MYEBRIMSMLCONTENTS
+--------------------------------------------------------
+
+  CREATE TABLE "MYEBRIMSMLCONTENTS" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"EBRIMCONTENT" VARCHAR2(2000), 
+	"SENSORMLCONTENT" CLOB, 
+	"OWER" VARCHAR2(20 BYTE), 
+	"FILENAME" VARCHAR2(500 BYTE), 
+	"CREATETIME" VARCHAR2(50 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table NOTIFICATION
+--------------------------------------------------------
+
+  CREATE TABLE "NOTIFICATION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"SUBSCRIPTION" NUMBER(10,0)
+   );
+--------------------------------------------------------
+--  DDL for Table NOTIFYACTION
+--------------------------------------------------------
+
+  CREATE TABLE "NOTIFYACTION" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"ENDPOINT" VARCHAR2(255 BYTE), 
+	"NOTIFICATIONOPTION" VARCHAR2(255 BYTE), 
+	"NOTIFYACTION_ID" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table OBJECTREF
+--------------------------------------------------------
+
+  CREATE TABLE "OBJECTREF" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"CREATEREPLICA" NUMBER(1,0), 
+	"OBJECTREF_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table ORGANIZATION
+--------------------------------------------------------
+
+  CREATE TABLE "ORGANIZATION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"PARENT" VARCHAR2(255 BYTE), 
+	"PRIMARYCONTACT" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table PERSON
+--------------------------------------------------------
+
+  CREATE TABLE "PERSON" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"PERSONNAME" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table PERSONNAME
+--------------------------------------------------------
+
+  CREATE TABLE "PERSONNAME" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"FIRSTNAME" VARCHAR2(255 BYTE), 
+	"LASTNAME" VARCHAR2(255 BYTE), 
+	"MIDDLENAME" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table POSTALADDRESS
+--------------------------------------------------------
+
+  CREATE TABLE "POSTALADDRESS" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"CITY" VARCHAR2(255 BYTE), 
+	"COUNTRY" VARCHAR2(255 BYTE), 
+	"POSTALCODE" VARCHAR2(255 BYTE), 
+	"STATEORPROVINCE" VARCHAR2(255 BYTE), 
+	"STREET" VARCHAR2(255 BYTE), 
+	"STREETNUMBER" VARCHAR2(255 BYTE), 
+	"POASALADDRESS_ID" VARCHAR2(255 BYTE), 
+	"POSTALADDRESS_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table PROCESSBASICINFO
+--------------------------------------------------------
+
+  CREATE TABLE "PROCESSBASICINFO" 
+   (	"OUTID" NUMBER(10,0), 
+	"PROCESSID" VARCHAR2(255 BYTE), 
+	"PROCESSTYPE" VARCHAR2(255 BYTE), 
+	"INTENDEDAPPLICATION" VARCHAR2(255 BYTE), 
+	"SERVICETYPE" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table QUERYEXPRESSION
+--------------------------------------------------------
+
+  CREATE TABLE "QUERYEXPRESSION" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"ANYTHINGS" VARCHAR2(255 BYTE), 
+	"QUERYLANGUAGE" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table REGISTRY
+--------------------------------------------------------
+
+  CREATE TABLE "REGISTRY" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"CONFORMANCEPROFILE" VARCHAR2(255 BYTE), 
+	"CATALOGINGLATENCY" VARCHAR2(255 BYTE), 
+	"REPLICATIONSYNLATENCY" VARCHAR2(255 BYTE), 
+	"SPECIFICATIONVERSION" VARCHAR2(255 BYTE), 
+	"OPERATOR" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table REGISTRYOBJECT
+--------------------------------------------------------
+
+  CREATE TABLE "REGISTRYOBJECT" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table REGISTRYPACKAGE
+--------------------------------------------------------
+
+  CREATE TABLE "REGISTRYPACKAGE" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"CSWOWNER" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table SATORBITJISUANTYPE
+--------------------------------------------------------
+
+  CREATE TABLE "SATORBITJISUANTYPE" 
+   (	"ID" NUMBER(10,0) primary key, 
+	"SATID" VARCHAR2(255 BYTE), 
+	"MAKER" VARCHAR2(255 BYTE), 
+	"EXTERNSTANDNAMEPLAT" NUMBER(10,0)
+   );
+--------------------------------------------------------
+--  DDL for Table SENSORML
+--------------------------------------------------------
+
+  CREATE TABLE "SENSORML" 
+   (	"ID" NUMBER, 
+	"SENSORID" VARCHAR2(255 BYTE), 
+	"SENSORCONTENT" CLOB, 
+	"USERNAME" VARCHAR2(50 BYTE), 
+	"SAVETIME" TIMESTAMP (6)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table SENSORMLIMAGE
+--------------------------------------------------------
+
+  CREATE TABLE "SENSORMLIMAGE" 
+   (	"ID" NUMBER, 
+	"SENSORID" VARCHAR2(500 BYTE), 
+	"SENSORIMGURL" VARCHAR2(500 BYTE), 
+	"SAVETIME" TIMESTAMP (6), 
+	"OWNER" VARCHAR2(50 BYTE), 
+	"ATTCHMENTMARKER" VARCHAR2(50 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table SENSORTYPERULE
+--------------------------------------------------------
+
+  CREATE TABLE "SENSORTYPERULE" 
+   (	"ID" NUMBER, 
+	"SENSORTYPENAME" VARCHAR2(500 BYTE), 
+	"SENSORKEYWORDS" VARCHAR2(3000 BYTE), 
+	"SENSORTYPECHINESENAME" VARCHAR2(500 BYTE), 
+	"MAKER" VARCHAR2(50 BYTE), 
+	"SAVEZIDUAN" VARCHAR2(500 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table SERVICE
+--------------------------------------------------------
+
+  CREATE TABLE "SERVICE" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table SERVICEBINDING
+--------------------------------------------------------
+
+  CREATE TABLE "SERVICEBINDING" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"ACCESSURI" VARCHAR2(255 BYTE), 
+	"SERVICE" VARCHAR2(255 BYTE), 
+	"TARGETBINDING" VARCHAR2(255 BYTE), 
+	"SERVICEBINDING_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table SLOT
+--------------------------------------------------------
+
+  CREATE TABLE "SLOT" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"SLOTTYPE" VARCHAR2(255 BYTE), 
+	"VALUESS" VARCHAR2(1000 BYTE), 
+	"SLOT_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table SPECIFICATIONLINK
+--------------------------------------------------------
+
+  CREATE TABLE "SPECIFICATIONLINK" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"SERVICEBINDING" VARCHAR2(255 BYTE), 
+	"SPECIFICATIONOBJECT" VARCHAR2(255 BYTE), 
+	"USAGEDESCRIPTION" VARCHAR2(255 BYTE), 
+	"USAGEPARAMETERS" VARCHAR2(255 BYTE), 
+	"SPECIFICATIONLINK_ID" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table STANDSATSENSORPLATFORMPAIR
+--------------------------------------------------------
+
+  CREATE TABLE "STANDSATSENSORPLATFORMPAIR" 
+   (	"ID" NUMBER(10,0) primary key, 
+	"PLATFORM" VARCHAR2(255 BYTE), 
+	"SENSORNAME" VARCHAR2(255 BYTE), 
+	"FUKUAI" FLOAT(126), 
+	"MAKER" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table SUBSCRIPTION
+--------------------------------------------------------
+
+  CREATE TABLE "SUBSCRIPTION" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"ENDTIME" VARCHAR2(255 BYTE), 
+	"STARTTIME" VARCHAR2(255 BYTE), 
+	"NOTIFICATIONINTERVAL" VARCHAR2(255 BYTE), 
+	"SELECTOR" VARCHAR2(255 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table SUSERS
+--------------------------------------------------------
+
+  CREATE TABLE "SUSERS" 
+   (	"OUTID" NUMBER(10,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"HOME" VARCHAR2(255 BYTE), 
+	"LID" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"OBJECTTYPE" VARCHAR2(255 BYTE), 
+	"STATUS" VARCHAR2(255 BYTE), 
+	"VERSIONINFO" VARCHAR2(255 BYTE), 
+	"PERSONNAME" VARCHAR2(255 BYTE)
+   );
+--------------------------------------------------------
+--  DDL for Table TELEPHONENUMBER
+--------------------------------------------------------
+
+  CREATE TABLE "TELEPHONENUMBER" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"AREACODE" VARCHAR2(255 BYTE), 
+	"COUNTRYCODE" VARCHAR2(255 BYTE), 
+	"NUMBERSS" VARCHAR2(255 BYTE), 
+	"EXTERSION" VARCHAR2(255 BYTE), 
+	"PHONETYPE" VARCHAR2(255 BYTE), 
+	"TELEPHONENUMBER_ID" VARCHAR2(255 BYTE)
+   ) ;
+  create table "SENSORBASICTYPE"(
+	"SENSORID" varchar2(500) primary key not null,
+	"SENSORBBOX" varchar2(500),
+	"SENSORBEGINTIME" varchar2(500),
+	"SENSORENDTIME" varchar2(500),
+	"SENSORINTENDAPP" varchar2(500),
+	"SENSORKEYWORDS" varchar2(500),
+	"SENSORLONGNAME" varchar2(500),
+	"SENSOROPERABLE" varchar2(500),
+	"SENSORORGAN" varchar2(500),
+	"SENSOROWNER" varchar2(500),
+	"SENSORPOS" varchar2(500),
+	"SENSORPUBLIC" varchar2(500),
+	"SENSORSHORTNAME" varchar2(500),
+	"SENSORTYPE" varchar2(500),
+	"SENSORSOSURL" varchar2(200)
+);
+
+  CREATE TABLE "USERSS" 
+   (	"OUTID" NUMBER(10,0), 
+	"USERNAME" VARCHAR2(255 BYTE), 
+	"PASSWORDS" VARCHAR2(255 BYTE), 
+	"GENDER" NUMBER(10,0), 
+	"AGE" NUMBER(10,0), 
+	"TELEPHONE" VARCHAR2(255 BYTE), 
+	"EMAILADDRESS" VARCHAR2(255 BYTE), 
+	"ZHIYE" VARCHAR2(255 BYTE), 
+	"ADDRESS" VARCHAR2(255 BYTE), 
+	"LEVELSS" NUMBER(10,0)
+   ) ;
+
+  CREATE TABLE "VERSIONINFO" 
+   (	"OUTID" NUMBER(19,0), 
+	"ID" VARCHAR2(255 BYTE), 
+	"COMMENTSS" VARCHAR2(255 BYTE), 
+	"VERSIONNAME" VARCHAR2(255 BYTE)
+   )  ;
+
+ insert into userss values (1,'admin','cswadmin',1,1,'13419633423','yangxunliang0706@126.com','xuesheng','jiangxi province',1);
+ insert into userss values (2,'visitor','visitor',1,1,'13419633423','yangxunliang0706@126.com','xuesheng','jiangxi province',1);
+ 
+ -----插入卫星匹配数据-----
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (1,'urn:liesmars:remotesensor:AQUA-MODIS','admin',6);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (2,'urn:liesmars:remotesensor:EO1-Hyperion','admin',7);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (14,'urn:liesmars:remotesensor:NOAA17-AVHRR3','admin',2);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (15,'urn:liesmars:remotesensor:LANDSAT8-OLI','admin',16);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (9,'urn:liesmars:remotesensor:EO1-ALI','admin',5);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (10,'urn:liesmars:remotesensor:MetopA-AVHRR3','admin',1);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (11,'urn:liesmars:remotesensor:MetopB-AVHRR3','admin',8);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (12,'urn:liesmars:remotesensor:NOAA16-AVHRR3','admin',4);
+INSERT INTO SATORBITJISUANTYPE (ID,SATID,MAKER,EXTERNSTANDNAMEPLAT) VALUES (13,'urn:liesmars:remotesensor:NOAA19-AVHRR3','admin',9);
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(12, 'AQUA', 'AVHRR3', 20.0, 'admin');
+
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(1, 'METOP-A', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(5, 'EO-1', 'ALI', 0.7, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(8, 'METOP-B', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(17, 'HUANJING 1A (HJ-1A)', 'HSI', 8.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(13, 'HAIYANG-1B', 'COCTS', 12.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(4, 'NOAA 16 [B]', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(9, 'NOAA 19 [+]', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(18, 'HUANJING 1A (HJ-1A)', 'WVC', 24.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(15, 'CARTOSAT-2 (IRS-P7)', 'AWIFS', 26.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(10, 'AQUA', 'MODIS', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(6, 'AQUA', 'MODIS', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(3, 'NOAA 18 [B]', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(16, 'LANDSAT 8', 'OLI', 28.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(11, 'EO-1', 'Hyperion', 0.6, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(7, 'EO-1', 'Hyperion', 0.6, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(2, 'NOAA 17 [-]', 'AVHRR3', 20.0, 'admin');
+INSERT INTO STANDSATSENSORPLATFORMPAIR(ID, PLATFORM, SENSORNAME, FUKUAI, MAKER)VALUES(14, 'FENGYUN 3A', 'MERSI-1', 25.0, 'admin');
+commit;
+ COMMIT;

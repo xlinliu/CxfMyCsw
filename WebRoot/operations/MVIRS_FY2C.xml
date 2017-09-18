@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:gml="http://www.opengis.net/gml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
+	version="1.0.1">
+	<sml:member>
+		<sml:System gml:id="MVIRS_FY2C">
+			<gml:description>FY-2C卫星于2004年10月19日发射升空，24日定位于东经105度赤道上空，定点距地面36000千米，以对亚太地区气象情况进行观测。FY-2C卫星的星载多光谱扫描辐射仪利用卫星自西向东的自旋和它的光学镜筒南北步进实现对地球的两维扫描。卫星自旋一周，同时取得4条可见光扫描线，3条红外和1条水汽扫描线。
+			</gml:description>
+			<!--     关键字     -->
+			<sml:keywords>
+				<sml:KeywordList>
+					<sml:keyword>FY2C</sml:keyword>
+					<sml:keyword>MVIRS</sml:keyword>
+					<sml:keyword>遥测</sml:keyword>
+					<sml:keyword>光学传感器</sml:keyword>
+				</sml:KeywordList>
+			</sml:keywords>
+			<!--     标识符     -->
+			<sml:identification>
+				<sml:IdentifierList>
+					<sml:identifier name="识别码">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+							<sml:value>urn:liesmars:Sensor:id:MVIRS_FY2C</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="全称">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+							<sml:value>可见光与红外自旋扫描辐射计</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="简称">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+							<sml:value>MVIRS</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="传感器关联的平台">
+						<sml:Term
+							definition="urn:liesmars:def:identifier:LIESMARS:instrumentAssociatedPlatform">
+							<sml:value>FY2C卫星</sml:value>
+						</sml:Term>
+					</sml:identifier>
+					<sml:identifier name="平台识别码">
+						<sml:Term definition="urn:liesmars:def:identifier:LIESMARS:platformID">
+							<sml:value>urn:liesmars:Sensor:id:FY2C</sml:value>
+						</sml:Term>
+					</sml:identifier>
+				</sml:IdentifierList>
+			</sml:identification>
+			<!--     分类器     -->
+			<sml:classification>
+				<sml:ClassifierList>
+					<sml:classifier name="传感器类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:sensorType">
+							<sml:value>扫描辐射仪</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="传感器类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:sensorType">
+							<sml:value>遥感</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="扫描类型">
+						<sml:Term definition="urn:ogc:def:identifier:OGC:1.0:scannerType">
+							<sml:value>摆扫</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>地球成像</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>气象预报</sml:value>
+						</sml:Term>
+					</sml:classifier>
+					<sml:classifier name="预期应用">
+						<sml:Term definition="urn:ogc:def:classifier:OGC:1.0:application">
+							<sml:value>灾害监测</sml:value>
+						</sml:Term>
+					</sml:classifier>
+				</sml:ClassifierList>
+			</sml:classification>
+			<!--     有效时间     -->
+			<sml:validTime>
+				<gml:TimePeriod gml:id="DOC_TIME">
+					<gml:beginPosition>2004-10-24</gml:beginPosition>
+					<gml:endPosition indeterminatePosition="now" />
+				</gml:TimePeriod>
+			</sml:validTime>
+			<!--     能力特征     -->
+			<sml:capabilities>
+				<swe:DataRecord>
+					<swe:field name="光谱波段数量">
+						<swe:Count definition="urn:liesmars:def:property:LIESMARS:numChannels">
+							<swe:value>5</swe:value>
+						</swe:Count>
+					</swe:field>
+					<swe:field name="量化等级">
+						<swe:QuantityRange
+							definition="urn:liesmars:def:property:LIESMARS:quantization">
+							<swe:uom code="bit" />
+							<swe:value>8 10</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="波段特征（可见光）">
+						<swe:ConditionalValue>
+							<swe:condition name="光谱波段">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>可见光</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange
+									definition="urn:liesmars:def:property:LIESMARS:spectralWidth">
+									<swe:uom code="nm" />
+									<swe:value>500 750</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity>
+									<gml:description>分辨率</gml:description>
+									<swe:uom code="km" />
+									<swe:value>1.25</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段特征（红外1）">
+						<swe:ConditionalValue>
+							<swe:condition name="波段光谱">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>红外1</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange
+									definition="urn:liesmars:def:property:LIESMARS:spectralWidth">
+									<swe:uom code="nm" />
+									<swe:value>3500 4000</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity>
+									<gml:description>分辨率</gml:description>
+									<swe:uom code="km" />
+									<swe:value>5</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段特征（水汽）">
+						<swe:ConditionalValue>
+							<swe:condition name="波段光谱">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>水汽</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange
+									definition="urn:liesmars:def:property:LIESMARS:spectralWidth">
+									<swe:uom code="nm" />
+									<swe:value>6200 7600</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity>
+									<gml:description>分辨率</gml:description>
+									<swe:uom code="km" />
+									<swe:value>5</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段特征（红外2）">
+						<swe:ConditionalValue>
+							<swe:condition name="波段光谱">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>红外2</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange
+									definition="urn:liesmars:def:property:LIESMARS:spectralWidth">
+									<swe:uom code="nm" />
+									<swe:value>10300 11300</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity>
+									<gml:description>分辨率</gml:description>
+									<swe:uom code="km" />
+									<swe:value>5</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="波段特征（红外3）">
+						<swe:ConditionalValue>
+							<swe:condition name="波段光谱">
+								<swe:Category definition="urn:liesmars:def:property:LIESMARS:spectralBand">
+									<swe:value>红外3</swe:value>
+								</swe:Category>
+							</swe:condition>
+							<swe:condition name="波段宽度">
+								<swe:QuantityRange
+									definition="urn:liesmars:def:property:LIESMARS:spectralWidth">
+									<swe:uom code="nm" />
+									<swe:value>11500 12500</swe:value>
+								</swe:QuantityRange>
+							</swe:condition>
+							<swe:data>
+								<swe:Quantity>
+									<gml:description>分辨率</gml:description>
+									<swe:uom code="km" />
+									<swe:value>5</swe:value>
+								</swe:Quantity>
+							</swe:data>
+						</swe:ConditionalValue>
+					</swe:field>
+					<swe:field name="视角">
+						<swe:Quantity definition="urn:liesmars:def:property:LIESMARS:fov">
+							<swe:uom code="deg" />
+							<swe:value>20</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="时间分辨率">
+						<swe:Quantity
+							definition="urn:liesmars:def:property:LIESMARS:temporalResolution">
+							<swe:uom code="min" />
+							<swe:value>15</swe:value>
+						</swe:Quantity>
+					</swe:field>
+				</swe:DataRecord>
+			</sml:capabilities>
+			<!--     联系     -->
+			<sml:contact>
+				<sml:ResponsibleParty>
+					<sml:individualName>胡楚丽</sml:individualName>
+					<sml:organizationName>测绘遥感信息工程国家重点实验室</sml:organizationName>
+					<sml:contactInfo>
+						<sml:phone>
+							<sml:voice>+8613437251610</sml:voice>
+						</sml:phone>
+						<sml:address>
+							<sml:deliveryPoint>中华人民共和国湖北省武汉大学</sml:deliveryPoint>
+							<sml:city>武汉</sml:city>
+							<sml:postalCode>430079</sml:postalCode>
+							<sml:country>中国</sml:country>
+						</sml:address>
+					</sml:contactInfo>
+				</sml:ResponsibleParty>
+			</sml:contact>
+			<!--     文档     -->
+			<sml:documentation>
+			</sml:documentation>
+			<!--     输入     -->
+			<sml:inputs>
+				<sml:InputList>
+					<sml:input name="辐射">
+						<swe:ObservableProperty definition="urn:liesmars:def:phenomenon:radiation" />
+					</sml:input>
+				</sml:InputList>
+			</sml:inputs>
+			<!--     输出     -->
+			<sml:outputs>
+				<sml:OutputList>
+					<sml:output name="影像数据">
+						<swe:DataArray gml:id="scanLine">
+							<swe:elementCount>
+								<swe:Count>
+									<swe:value>2500</swe:value>
+								</swe:Count>
+							</swe:elementCount>
+							<swe:elementType name="pixel">
+								<swe:Quantity
+									definition="urn:liesmars:def:property:LIESMARS:1.0:radiance">
+									<swe:uom code="300.mW.cm-2.Sr-1.um-1" />
+									<swe:constraint>
+										<swe:AllowedValues>
+											<swe:interval>-32767 32767</swe:interval>
+										</swe:AllowedValues>
+									</swe:constraint>
+								</swe:Quantity>
+							</swe:elementType>
+						</swe:DataArray>
+					</sml:output>
+				</sml:OutputList>
+			</sml:outputs>
+			<!--     位置     -->
+			<sml:positions>
+				<sml:PositionList>
+					<!--传感器相对于FY2C的位置-->
+					<sml:position name="sensor_position">
+						<swe:Position localFrame="#MSC_sensorCRS"
+							referenceFrame="urn:liesmars:id:FY2C#FY2C-CRS">
+							<swe:location>
+								<swe:Vector>
+									<swe:coordinate name="x">
+										<swe:Quantity>
+											<swe:uom code="m" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="y">
+										<swe:Quantity>
+											<swe:uom code="m" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="z">
+										<swe:Quantity>
+											<swe:uom code="m" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:location>
+							<swe:orientation>
+								<swe:Vector>
+									<swe:coordinate name="x">
+										<swe:Quantity>
+											<swe:uom code="deg" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="y">
+										<swe:Quantity>
+											<swe:uom code="deg" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="z">
+										<swe:Quantity>
+											<swe:uom code="deg" />
+											<swe:value>999999</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:orientation>
+						</swe:Position>
+					</sml:position>
+				</sml:PositionList>
+			</sml:positions>
+			<!--     参数     -->
+			<!--     部件     -->
+			<!--     关系     -->
+		</sml:System>
+	</sml:member>
+</sml:SensorML>

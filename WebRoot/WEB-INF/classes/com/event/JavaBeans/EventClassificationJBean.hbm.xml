@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.event.JavaBeans.EventClassificationJBean" table="event_classification_info">
+		<id name="classificationid" column="classificationid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="eventCatagory" column="event_catagory"
+			not-null="true" lazy="false"></property>
+		<property name="eventCertainty" column="event_certainty"
+			not-null="true"></property>
+		<property name="eventInheritance" column="event_inheritance"
+			not-null="true"></property>
+		<property name="eventPattern" column="event_pattern"
+			not-null="true"></property>
+		<property name="eventSeverity" column="event_severity"
+			not-null="true"></property>
+		<property name="eventUrgency" column="event_urgency"
+			not-null="true"></property>
+		<property name="eventid" not-null="true" column="event_id"></property>
+	</class>
+</hibernate-mapping>

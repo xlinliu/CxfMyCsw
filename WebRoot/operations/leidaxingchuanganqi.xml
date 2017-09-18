@@ -1,0 +1,505 @@
+<SensorML version="1.0.1"
+	xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
+	xmlns="http://www.opengis.net/sensorML/1.0.1" xmlns:gml="http://www.opengis.net/gml"
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<member>
+		<!--=============-->
+		<!--  卫星传感器 -->
+		<!--=============-->
+		<System gml:id="RemoteSensorSAR">
+			<gml:description>卫星传感器概述</gml:description>
+			<gml:name>卫星雷达成像传感器</gml:name>
+			<!--======================-->
+			<!--  传感器标签==>关键词  -->
+			<!--======================-->
+			<!--YXL 已转换 -->
+			<keywords>
+				<KeywordList>
+					<keyword>遥感</keyword>
+					<keyword>传感器英文简称</keyword>
+					<keyword>卫星英文简称</keyword>
+					<keyword>传感器中文全称</keyword>
+					<keyword>典型应用1</keyword>
+					<keyword>典型应用2</keyword>
+				</KeywordList>
+			</keywords>
+			<!--======================-->
+			<!--  传感器标签==>标示符  -->
+			<!--======================-->
+			<!--全部已经转换 -->
+			<identification>
+				<IdentifierList>
+					<!--YXL 已转换 -->
+					<identifier name="标识码">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+							<value>urn:ogc:feature:remotesensor:传感器英文简称大写(不能有空格等)</value>
+						</Term>
+					</identifier>
+					<!--YXL 已转换 -->
+					<identifier name="全称">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+							<value>null</value>
+						</Term>
+					</identifier>
+					<!--YXL 已转换 -->
+					<identifier name="简称">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+							<value>null</value>
+						</Term>
+					</identifier>
+					<!--YXL 已转换 -->
+					<identifier name="所属平台名称">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:parentSystemStandardName">
+							<value>平台英文简称</value>
+						</Term>
+					</identifier>
+					<!--YXL 已转换 -->
+					<identifier name="所属平台标识码">
+						<Term definition="urn:ogc:def:identifier:OGC:1.0:parentSystemUniqueId">
+							<value>urn:ogc:feature:remotesensor:platform:XX</value>
+						</Term>
+					</identifier>
+				</IdentifierList>
+			</identification>
+			<!--======================-->
+			<!--  传感器标签==>分类器  -->
+			<!--======================-->
+			<classification>
+				<ClassifierList>
+					<!--YXL 已转换 -->
+					<classifier name="传感器类型">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:sensorType">
+							<value>雷达成像仪</value>
+						</Term>
+					</classifier>
+					<!--YXL 已转换 -->
+					<classifier name="雷达类型">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:radarType">
+							<value>合成孔径雷达/真实孔径雷达</value>
+						</Term>
+					</classifier>
+					<!--YXL 已转换 -->
+					<classifier name="预期应用">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:intendedApplication">
+							<value>对地观测成像</value>
+						</Term>
+					</classifier>
+					<!--YXL 已转换 -->
+					<classifier name="预期应用">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+							<value>flood【必填】</value>
+						</Term>
+					</classifier>
+					<!--YXL 已转换 -->
+					<classifier name="预期应用">
+						<Term definition="urn:ogc:def:classifier:OGC:1.0:newAdded">
+							<value>应用1（此结构可重复）</value>
+						</Term>
+					</classifier>
+				</ClassifierList>
+			</classification>
+			<!--=============================-->
+			<!--  传感器互操作服务==>有效时间  -->
+			<!--=============================-->
+			<!--YXL 已转换 -->
+			<validTime>
+				<gml:TimePeriod gml:id="传感器有效时间">
+					<gml:beginPosition>2011-01-01T00:00:00.0Z</gml:beginPosition>
+					<gml:endPosition>2011-01-01T00:00:00.0Z</gml:endPosition>
+				</gml:TimePeriod>
+			</validTime>
+			<!--===========================-->
+			<!--  传感器物理特征==>物理特征  -->
+			<!--===========================-->
+			<!--YXL 已转换 -->
+			<characteristics>
+				<swe:DataRecord definition="urn:ogc:def:property:Liesmars:physicalProperties">
+					<swe:field name="长度">
+						<swe:Quantity definition="urn:ogc:def:property:length">
+							<swe:uom code="m" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="宽度">
+						<swe:Quantity definition="urn:ogc:def:property:width">
+							<swe:uom code="m" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="高度">
+						<swe:Quantity definition="urn:ogc:def:property:height">
+							<swe:uom code="m" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="质量">
+						<swe:Quantity definition="urn:ogc:def:property:weight">
+							<swe:uom code="kg" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="电流">
+						<swe:Quantity definition="urn:ogc:def:property:current">
+							<swe:uom code="A" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="电压">
+						<swe:Quantity definition="urn:ogc:def:property:voltage">
+							<swe:uom code="V" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="功率">
+						<swe:Quantity definition="urn:ogc:def:property:power">
+							<swe:uom code="W" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="设计寿命">
+						<swe:Quantity definition="urn:ogc:def:property:designedLife">
+							<swe:uom code="year" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+				</swe:DataRecord>
+			</characteristics>
+			<!--===========================-->
+			<!--  传感器观测能力==>观测广度  -->
+			<!--  传感器观测能力==>观测深度  -->
+			<!--  传感器观测能力==>观测频度  -->
+			<!--  传感器观测能力==>观测质量  -->
+			<!--  传感器观测能力==>观测数据  -->
+			<!--===========================-->
+			<capabilities>
+				<swe:DataRecord
+					definition="urn:ogc:def:property:Liesmars:measurementCapabilities">
+					<!--YXL 已转换 -->
+					<!--  传感器观测能力==>观测广度  -->
+					<swe:field name="observedBBOX">
+						<swe:Envelope definition="urn:ogc:def:property:OGC:1.0:observedBBOX"
+							referenceFrame="urn:ogc:def:crs:EPSG:4326">
+							<swe:lowerCorner>
+								<swe:Vector>
+									<swe:coordinate name="纬度">
+										<swe:Quantity axisID="y">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>-40</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="经度">
+										<swe:Quantity axisID="x">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>-180</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:lowerCorner>
+							<swe:upperCorner>
+								<swe:Vector>
+									<swe:coordinate name="纬度">
+										<swe:Quantity axisID="y">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>90</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+									<swe:coordinate name="经度">
+										<swe:Quantity axisID="x">
+											<swe:uom code="deg" xlink:href="urn:ogc:def:uom:UCUM::deg" />
+											<swe:value>180</swe:value>
+										</swe:Quantity>
+									</swe:coordinate>
+								</swe:Vector>
+							</swe:upperCorner>
+						</swe:Envelope>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="波段类别">
+						<swe:Category definition="urn:ogc:def:property:bandsCategory">
+							<swe:value>VIS/NIR/SWIR/MWIR/TIR/FIR/
+								MW/K-Band/X-Band/C-Band/S-Band/L-Band /P-Band（可多选，中文分号分隔）
+							</swe:value>
+						</swe:Category>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="成像幅宽范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:swathRange">
+							<swe:uom code="km" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="入射角度范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:incidentAngle">
+							<swe:uom code="deg" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="极化方式">
+						<swe:Category definition="urn:ogc:def:property:polarizationMode">
+							<swe:value>HH/HV/VV/VH</swe:value>
+						</swe:Category>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="波段频率">
+						<swe:Quantity definition="urn:ogc:def:property:bandFrequency">
+							<swe:uom code="GHz" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<!--YXL 已转换 -->
+					<swe:field name="光束模式">
+						<swe:Category definition="urn:ogc:def:property:lightBeamMode">
+							<swe:value>聚焦/非聚焦</swe:value>
+						</swe:Category>
+					</swe:field>
+					<!--  传感器观测能力==>观测广度  -->
+					<!--  传感器观测能力==>观测深度  -->
+					<!--  传感器观测能力==>观测质量  -->
+					<swe:field name="波束模式特征">
+						<swe:DataRecord>
+							<swe:field name="标准模式（示例）">
+								<swe:DataRecord>
+									<swe:field name="模式">
+										<swe:Text definition="urn:ogc:def:property:mode">
+											<swe:value>标准模式（示例）</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="极化方式">
+										<swe:Category definition="urn:ogc:def:property:polarizationMode">
+											<swe:value>HH/HV/VV/VH</swe:value>
+										</swe:Category>
+									</swe:field>
+									<swe:field name="入射角度">
+										<swe:QuantityRange definition="urn:ogc:def:property:incidentAngle">
+											<swe:uom code="deg" />
+											<swe:value>00 00</swe:value>
+										</swe:QuantityRange>
+									</swe:field>
+									<swe:field name="距离分辨率">
+										<swe:Quantity definition="urn:ogc:def:property:rangeResolution">
+											<swe:uom code="m" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="方位分辨率">
+										<swe:Quantity definition="urn:ogc:def:property:azimuthResolution">
+											<swe:uom code="m" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="刈幅">
+										<swe:Quantity definition="urn:ogc:def:property:swath">
+											<swe:uom code="km" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="辐射精度">
+										<swe:Text definition="urn:ogc:def:property:radiometricAccuracy">
+											<swe:value>null</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="模式应用">
+										<swe:Text definition="urn:ogc:def:property:modeApplication">
+											<swe:value>null</swe:value>
+										</swe:Text>
+									</swe:field>
+								</swe:DataRecord>
+							</swe:field>
+							<swe:field name="标准模式（示例）">
+								<swe:DataRecord>
+									<swe:field name="模式">
+										<swe:Text definition="urn:ogc:def:property:mode">
+											<swe:value>标准模式（示例）</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="入射角度">
+										<swe:QuantityRange definition="urn:ogc:def:property:incidentAngle">
+											<swe:uom code="deg" />
+											<swe:value>00 00</swe:value>
+										</swe:QuantityRange>
+									</swe:field>
+									<swe:field name="距离分辨率">
+										<swe:Quantity definition="urn:ogc:def:property:rangeResolution">
+											<swe:uom code="m" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="方位分辨率">
+										<swe:Quantity definition="urn:ogc:def:property:azimuthResolution">
+											<swe:uom code="m" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="刈幅">
+										<swe:Quantity definition="urn:ogc:def:property:swath">
+											<swe:uom code="km" />
+											<swe:value>00</swe:value>
+										</swe:Quantity>
+									</swe:field>
+									<swe:field name="辐射精度">
+										<swe:Text definition="urn:ogc:def:property:radiometricAccuracy">
+											<swe:value>null</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="模式应用">
+										<swe:Text definition="urn:ogc:def:property:modeApplication">
+											<swe:value>null</swe:value>
+										</swe:Text>
+									</swe:field>
+								</swe:DataRecord>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:field>
+					<!--  传感器观测能力==>观测深度  -->
+					<swe:field name="地面分辨率范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:spatialResolutionRange">
+							<swe:uom code="m" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="距离向分辨率范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:rangeResolutionRange">
+							<swe:uom code="m" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="方位向分辨率范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:azimuthResolutionRange">
+							<swe:uom code="m" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<swe:field name="量化等级">
+						<swe:Quantity definition="urn:ogc:def:property:quantizationLevel">
+							<swe:uom code="bit" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="探测精度">
+						<swe:QuantityRange definition="urn:ogc:def:property:precisionRange">
+							<swe:uom code="%" />
+							<swe:value>5 5</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<!--  传感器观测能力==>观测频度  -->
+					<swe:field name="时间分辨率范围">
+						<swe:QuantityRange definition="urn:ogc:def:property:temporalResolutionRange">
+							<swe:uom code="d" />
+							<swe:value>00 00</swe:value>
+						</swe:QuantityRange>
+					</swe:field>
+					<!--  传感器观测能力==>观测质量  -->
+					<swe:field name="定位精度">
+						<swe:Quantity definition="urn:ogc:def:property:positioningAccuracy">
+							<swe:uom code="m" />
+							<swe:value>00</swe:value>
+						</swe:Quantity>
+					</swe:field>
+					<swe:field name="辐射精度">
+						<swe:Text definition="urn:ogc:def:property:radiometricAccuracy">
+							<swe:value>null</swe:value>
+						</swe:Text>
+					</swe:field>
+					<!--  传感器观测能力==>观测数据  -->
+					<swe:field name="数据格式">
+						<swe:Category definition="urn:ogc:def:property:dataFormat">
+							<swe:value>null</swe:value>
+						</swe:Category>
+					</swe:field>
+					<swe:field name="数据质量等级">
+						<swe:Category definition="urn:ogc:def:property:dataQualityLevel">
+							<swe:value>null</swe:value>
+						</swe:Category>
+					</swe:field>
+					<swe:field name="数据获取等级">
+						<swe:Category definition="urn:ogc:def:property:dataAccessLevel">
+							<swe:value>null</swe:value>
+						</swe:Category>
+					</swe:field>
+				</swe:DataRecord>
+			</capabilities>
+			<!--=============================-->
+			<!--  传感器互操作服务==>联系单位  -->
+			<!--=============================-->
+			<!--YXL 已转换 -->
+			<contact xlink:arcrole="urn:ogc:def:role:operator">
+				<ResponsibleParty>
+					<individualName>null</individualName>
+					<organizationName>null（中文名称加括号英文简称）</organizationName>
+					<contactInfo>
+						<phone>
+							<voice>null</voice>
+							<facsimile>null</facsimile>
+						</phone>
+						<address>
+							<deliveryPoint>null</deliveryPoint>
+							<city>null</city>
+							<administrativeArea>null</administrativeArea>
+							<postalCode>null</postalCode>
+							<country>null</country>
+							<electronicMailAddress>null</electronicMailAddress>
+						</address>
+					</contactInfo>
+				</ResponsibleParty>
+			</contact>
+			<!--=============================-->
+			<!--  传感器互操作服务==>服务接口  -->
+			<!--=============================-->
+			<!--YXL 已转换 -->
+			<!-- 准备将这些转换为三个slot来进行存储，其中slottype均为string，-->
+			<interfaces>
+				<InterfaceList>
+					<interface name="MODIS_SOS(示例)">
+						<InterfaceDefinition>
+							<serviceLayer>
+								<swe:DataRecord
+									definition="urn:ogc:def:interface:OGC:1.0:SWEServiceInterface">
+									<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceURL">
+										<swe:Text>
+											<swe:value>http://swe.whu.edu.cn:9000/SOS/sos</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field name="urn:ogc:def:interface:OGC:1.0:ServiceType">
+										<swe:Text>
+											<swe:value>SOS</swe:value>
+										</swe:Text>
+									</swe:field>
+									<swe:field
+										name="urn:ogc:def:interface:OGC:1.0:ServiceSpecificSensorID">
+										<swe:Text>
+											<swe:value>urn:ogc:feature:remotesensor:MODIS</swe:value>
+										</swe:Text>
+									</swe:field>
+								</swe:DataRecord>
+							</serviceLayer>
+						</InterfaceDefinition>
+					</interface>
+				</InterfaceList>
+			</interfaces>
+			<!--============-->
+			<!--  输入输出  -->
+			<!--============-->
+			<!--YXL 已转换 -->
+			<inputs>
+				<InputList>
+					<input name="微波反射">
+						<swe:ObservableProperty definition="urn:ogc:def:property:OGC:1.0:microwave" />
+					</input>
+				</InputList>
+			</inputs>
+			<!--YXL 已转换 -->
+			<outputs>
+				<OutputList>
+					<output name="影像">
+						<swe:Quantity definition="urn:ogc:def:property:OGC:1.0:image">
+							<swe:uom code="pix" />
+						</swe:Quantity>
+					</output>
+				</OutputList>
+			</outputs>
+		</System>
+	</member>
+</SensorML>

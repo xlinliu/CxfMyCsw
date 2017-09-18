@@ -1,0 +1,23 @@
+//test用户名的默认的表空间为users
+//创建表空间 
+create tablespace csw_semantic datafile 'D:\oracletable\oraclesemantic.dbf' size 1024M reuse autoextend on next 256M MAXSIZE UNLIMITED SEGMENT SPACE MANAGEMENT AUTO;
+//创建网络 
+execute sem_apis.create_sem_network('csw_semantic');
+//创建表
+create table csw_table(id number,triple sdo_rdf_triple_s);
+//创建模型
+execute sem_apis.create_sem_model('cswsemantic','csw_table','triple');
+//创建索引
+create index articles_sub_idx on csw_table(triple.get_subject());
+create index articles_prop_idx on csw_table(triple.get_property());
+create index artcile_obj_idx on csw_table(to_char(triple.get_object()));
+//创建一个空的表
+create table csw_temp ( 
+RDF$STC_sub varchar2(4000) not null, 
+RDF$STC_pred varchar2(4000) not null, 
+RDF$STC_obj varchar2(4000) not null, 
+RDF$STC_sub_ext varchar2(64), 
+RDF$STC_pred_ext varchar2(64), 
+RDF$STC_obj_ext varchar2(64), 
+RDF$STC_canon_ext varchar2(64) 
+); 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.csw.model.ebXMLModel.QueryExpression" table="queryExpression"
+		dynamic-insert="true" dynamic-update="true">
+		<id name="outid" column="outid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="id" column="id"></property>
+		<property name="anythings" column="anythings"></property>
+		<many-to-one name="queryLanguage" class="com.csw.model.ebXMLModel.ObjectRef"
+			property-ref="id" cascade="all"></many-to-one>
+	</class>
+</hibernate-mapping>

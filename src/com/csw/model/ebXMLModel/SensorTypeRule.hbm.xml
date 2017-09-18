@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.csw.model.ebXMLModel.SensorTypeRule" table="sensortyperule"
+		dynamic-insert="true" dynamic-update="true">
+		<!--唯一标识符-->
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<!--设置不能重复-->
+		<property name="sensortypename" column="sensortypename"
+			unique="true" not-null="true"></property>
+		<!-- 不能设置重复 -->
+		<property name="sensortypechinesename" column="sensortypechinesename"
+			unique="true" not-null="true"></property>
+		<!--设置不能为空-->
+		<property name="sensorkeywords" column="sensorkeywords"
+			not-null="true"></property>
+		<!-- 拥有者 -->
+		<property name="maker" column="maker" not-null="true"></property>
+		<property name="saveziduan" column="saveziduan" not-null="false"></property>
+	</class>
+</hibernate-mapping>

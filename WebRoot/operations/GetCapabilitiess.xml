@@ -1,0 +1,167 @@
+<ns:Capabilities version="2.0.2"
+	xmlns:ns="http://www.opengis.net/cat/csw/2.0.2">
+	<ows:ServiceIdentification xmlns:ows="http://www.opengis.net/ows">
+		<ows:Title>神瑞溶解氧传感器CS511-L</ows:Title>
+		<ows:Keywords>
+			<ows:Keyword>溶解氧</ows:Keyword>
+			<ows:Keyword>水质</ows:Keyword>
+			<ows:Keyword>现场</ows:Keyword>
+		</ows:Keywords>
+		<ows:ServiceType codeSpace="http://www.opengis.net/cat/csw">CSW</ows:ServiceType>
+		<ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+		<ows:ServiceTypeVersion>2.0.2</ows:ServiceTypeVersion>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider xmlns:ows="http://www.opengis.net/ows">
+		<ows:ProviderName>武汉大学测绘遥感信息工程国家重点实验室</ows:ProviderName>
+		<ows:ServiceContact>
+			<ows:IndividualName>李佳</ows:IndividualName>
+			<ows:ContactInfo>
+				<ows:Address>
+					<ows:City>武汉</ows:City>
+					<ows:PostalCode>430079</ows:PostalCode>
+					<ows:Country>中国</ows:Country>
+					<ows:ElectronicMailAddress>Jerrylee@qq.com
+					</ows:ElectronicMailAddress>
+				</ows:Address>
+			</ows:ContactInfo>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata xmlns:ows="http://www.opengis.net/ows">
+		<ows:Operation name="GetRecords">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/GetRecordsAction"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+			<ows:Parameter name="typeName">
+				<ows:Value>rim:registrypackage</ows:Value>
+				<ows:Value>csw:record</ows:Value>
+			</ows:Parameter>
+			<ows:Parameter name="outputFormat">
+				<ows:Value>text/xml</ows:Value>
+				<ows:Value>application/xml</ows:Value>
+			</ows:Parameter>
+			<ows:Parameter name="outputSchema">
+				<ows:Value>http://www.opengis.net/cat/csw/2.0.2</ows:Value>
+				<ows:Value>urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0</ows:Value>
+			</ows:Parameter>
+			<ows:Parameter name="resultType">
+				<ows:Value>hits</ows:Value>
+				<ows:Value>results</ows:Value>
+				<ows:Value>validate</ows:Value>
+			</ows:Parameter>
+			<ows:Parameter name="ElementSetName">
+				<ows:Value>brief</ows:Value>
+				<ows:Value>summary</ows:Value>
+				<ows:Value>full</ows:Value>
+			</ows:Parameter>
+			<ows:Parameter name="CONSTRAINTLANGUAGE">
+				<ows:Value>Filter</ows:Value>
+				<ows:Value>CQL</ows:Value>
+			</ows:Parameter>
+			<ows:Constraint name="SupportedISOQueryables">
+				<ows:Value>RevisionDate</ows:Value>
+				<ows:Value>AlternateTitle</ows:Value>
+				<ows:Value>CreationDate</ows:Value>
+				<ows:Value>PublicationDate</ows:Value>
+				<ows:Value>OrganisationName</ows:Value>
+				<ows:Value>HasSecurityConstraints</ows:Value>
+				<ows:Value>Language</ows:Value>
+				<ows:Value>ResourceIdentifier</ows:Value>
+				<ows:Value>ParentIdentifier</ows:Value>
+				<ows:Value>KeywordType</ows:Value>
+				<ows:Value>TopicCategory</ows:Value>
+				<ows:Value>ResourceLanguage</ows:Value>
+				<ows:Value>GeographicDescriptionCode</ows:Value>
+				<ows:Value>DistanceValue</ows:Value>
+				<ows:Value>DistanceUOM</ows:Value>
+				<ows:Value>TempExtent_begin</ows:Value>
+				<ows:Value>TempExtent_end</ows:Value>
+				<ows:Value>ServiceType</ows:Value>
+				<ows:Value>ServiceTypeVersion</ows:Value>
+				<ows:Value>Operation</ows:Value>
+				<ows:Value>CouplingType</ows:Value>
+				<ows:Value>OperatesOn</ows:Value>
+				<ows:Value>Denominator</ows:Value>
+				<ows:Value>OperatesOnIdentifier</ows:Value>
+				<ows:Value>OperatesOnWithOpName</ows:Value>
+			</ows:Constraint>
+			<ows:Constraint name="AdditionalQueryables">
+				<ows:Value>HierarchyLevelName</ows:Value>
+			</ows:Constraint>
+		</ows:Operation>
+		<ows:Operation name="GetRecordById">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/GetRecordByIdAction"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+			<ows:Parameter name="ElementSetName">
+				<ows:Value>brief</ows:Value>
+				<ows:Value>summary</ows:Value>
+				<ows:Value>full</ows:Value>
+			</ows:Parameter>
+		</ows:Operation>
+		<ows:Operation name="DescribeRecord">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/DescribeRecordAction"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="GetDomain">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/GetDomainAction"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Transaction">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/TransactionAction"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Harvest">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlin:href="http://localhost:8082/MyCswPro/Harvest"
+						xmlns:xlin="http://www.w3.org/1999/xlink" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<ogc:Filter_Capabilities xmlns:ogc="http://www.opengis.net/ogc">
+		<ogc:Spatial_Capabilities>
+			<ogc:GeometryOperands>
+				<ogc:GeometryOperand>gml:Envelope</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:Point</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:LineString</ogc:GeometryOperand>
+				<ogc:GeometryOperand>gml:Polygon</ogc:GeometryOperand>
+			</ogc:GeometryOperands>
+			<ogc:SpatialOperators>
+				<ogc:SpatialOperator name="BBOX" />
+				<ogc:SpatialOperator name="Beyond" />
+				<ogc:SpatialOperator name="Contains" />
+				<ogc:SpatialOperator name="Crosses" />
+				<ogc:SpatialOperator name="Disjoint" />
+				<ogc:SpatialOperator name="DWithin" />
+				<ogc:SpatialOperator name="Equals" />
+				<ogc:SpatialOperator name="Intersects" />
+				<ogc:SpatialOperator name="Overlaps" />
+				<ogc:SpatialOperator name="Touches" />
+				<ogc:SpatialOperator name="Within" />
+			</ogc:SpatialOperators>
+		</ogc:Spatial_Capabilities>
+		<ogc:Id_Capabilities>
+			<ogc:FID />
+			<ogc:EID />
+		</ogc:Id_Capabilities>
+	</ogc:Filter_Capabilities>
+</ns:Capabilities>

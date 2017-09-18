@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.event.JavaBeans.EventResponseInfoJBean" table="event_response_info">
+		<id name="responseid" column="responseid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="eventid" column="event_id" not-null="true"></property>
+		<component name="erop"
+			class="com.event.InnerEntities.EventResponseObservation" lazy="false">
+			<property name="TrappedPerson" column="trappedperson"
+				not-null="true"></property>
+			<set name="rodsDemagedRoads" lazy="false" cascade="none"
+				table="event_response_deload_conn">
+				<key column="erop_id"></key>
+				<one-to-many class="com.event.JavaBeans.EventDenagedRoadJBean" />
+			</set>
+			<component name="pInfo" class="com.event.InnerEntities.PrecationInfo">
+				<property name="groundData" column="grounddata" not-null="true"></property>
+				<property name="satelliteData" column="satellitedata"
+					not-null="true"></property>
+				<property name="UAVData" column="uavdata" not-null="true"></property>
+			</component>
+		</component>
+		<component name="epr"
+			class="com.event.InnerEntities.EventResponseResource" lazy="false">
+			<property name="lgoinsticspoints" column="loginsticspoints"
+				not-null="true"></property>
+			<property name="resourceTeam" column="resourceteam"
+				not-null="true"></property>
+		</component>
+		<component name="ersr"
+			class="com.event.InnerEntities.EventResponseStateReport" lazy="false">
+			<property name="repairedFortificationURL" not-null="true"
+				column="repairedfortificationurl"></property>
+			<property name="repairedRoadsUrl" not-null="true" column="repairedroadurl"></property>
+			<property name="searchedRegionsURL" not-null="true"
+				column="searchedregionsurl"></property>
+		</component>
+		<component name="ertp"
+			class="com.event.InnerEntities.EventResponseTrendPredition" lazy="false">
+			<property name="factorsEstimation" column="factorsestimation"
+				not-null="true"></property>
+			<property name="situationPrediction" column="situationprediction"
+				not-null="true"></property>
+		</component>
+	</class>
+</hibernate-mapping>

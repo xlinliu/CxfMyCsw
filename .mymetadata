@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CxfMyCsw"
+  id="myeclipse.1365575335158"
+  context-root="/CxfMyCsw"
+  j2ee-spec="5.0"
+  archive="CxfMyCsw.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
